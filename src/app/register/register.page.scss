@@ -1,0 +1,39 @@
+.register-background{
+    background-color: white;
+    position: absolute;
+    top: 10%;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+    text-align: center;
+    padding: 25px;
+}
+
+.text{
+    font-size: smaller;
+}
+
+.east {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    position: absolute;
+    transform: rotate(90deg);
+}
+.south {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    position: absolute;
+    transform: rotate(180deg);
+}
+.west {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    position: absolute;
+    transform: rotate(270deg);
+}

@@ -24,3 +24,28 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.title{
+    color: #3a3b3a;
+    font-size: larger;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+.toolbar-container{
+    height: 80px !important;
+}
+
+.model-toolbar-background{
+    height: 60px;
+    padding-top: 15px;
+    text-align: center;
+    color: white;
+    background-color: #7fa35a;
+    --opacity: 0 !important;
+}
+
+.toolbar-background{
+    height: 60px;
+    background-color: #7fa35a;
+}

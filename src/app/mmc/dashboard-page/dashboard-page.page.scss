@@ -1,0 +1,51 @@
+.regionBackground{
+    background-image: url(../../../assets/img/regionBackground.jpg);
+    height: 160px;  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.auditBackground{
+    background-image: url(../../../assets/img/auditBackground.jfif);
+    height: 160px;  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cattleBackground{
+    background-image: url(../../../assets/img/cattleBackground.jfif);
+    height: 160px;  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body, html {
+    height: 100%;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+    
+  /* Position text in the middle of the page/image */
+  .bg-text {
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 64%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 95%;
+    padding: 20px;
+  }
+
+  p{
+    margin: unset !important;
+    font-weight: 100;
+  }

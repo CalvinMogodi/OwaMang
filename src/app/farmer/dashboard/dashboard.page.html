@@ -1,0 +1,162 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="header">O wa Mang</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--<h1 class="padding-5">My Livestock</h1>-->
+
+  <ion-list inset="true">
+    <ion-list-header>
+      <ion-item style="width: 100%;">
+        <ion-icon slot="end" name="add-outline"></ion-icon>
+        <ion-label>
+          <h1> My Livestock</h1>
+        </ion-label>
+      </ion-item>
+    </ion-list-header>
+    <ion-accordion-group>
+      <ion-accordion value="colors" toggle-icon="arrow-down-circle">
+        <ion-item slot="header">
+          <ion-list>
+            <ion-item class="padding-5" lines="none">
+              <img slot="start" src="../../../assets/img/home-cow.png" height="90px" />
+
+              <ion-label>
+                <h2>Cattles</h2>
+                <h3>568</h3>
+                <p>Listen, I've had a pretty messed up day...</p>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-item>
+
+        <ion-list slot="content">
+          <ion-item>
+            <ion-list inset="true">
+              <ion-accordion-group>
+                <ion-accordion value="AJS129" toggle-icon="arrow-down-circle">
+                  <ion-item slot="header">
+                    <ion-list>
+                      <ion-item class="padding-5" lines="none" style="width: max-content;">
+                        <img slot="start" src="../../../assets/img/cow-img.jfif" height="60px" />
+
+                        <ion-label>
+                          <h2>AJS 129...</h2>
+                          <h3>Age: <b>2 years</b></h3>
+                          <p>health: <ion-icon style="color: #7f9e56;" name="pulse-outline"></ion-icon>
+                          </p>
+                        </ion-label>
+                      </ion-item>
+                    </ion-list>
+                  </ion-item>
+
+                  <ion-list slot="content">
+                    <ion-card class="details">
+                      <ion-card-header>
+                        <ion-card-subtitle>Brahman</ion-card-subtitle>
+                        <ion-card-title>AJS 129 09</ion-card-title>
+                      </ion-card-header>
+                      <ion-card-content>
+                        Founded in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was named the
+                        capital of the
+                        Wisconsin Territory in 1836.
+                      </ion-card-content>
+                    </ion-card>
+                  </ion-list>
+                </ion-accordion>
+                <ion-accordion value="colors" toggle-icon="arrow-down-circle">
+                  <ion-item slot="header">
+                    <ion-list>
+                      <ion-item class="padding-5" lines="none" style="width: max-content;">
+                        <img slot="start" src="../../../assets/img/cow-img-1.jfif" height="60px" />
+
+                        <ion-label>
+                          <h2>&#67; &#69; &#8710; 01</h2>
+                          <h3>Age: <b>2 years</b></h3>
+                          <p>health: <ion-icon style="color: #7f9e56;" name="pulse-outline"></ion-icon>
+                          </p>
+                        </ion-label>
+                      </ion-item>
+                    </ion-list>
+                  </ion-item>
+
+                  <ion-list slot="content">
+                    <ion-card class="details">
+                      <ion-card-header>
+                        <ion-card-subtitle>Bonsmara</ion-card-subtitle>
+                        <ion-card-title>&#67; &#69; &#8710; 01</ion-card-title>
+                      </ion-card-header>
+                      <ion-card-content>
+                        Founded in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was named the
+                        capital of the
+                        Wisconsin Territory in 1836.
+                      </ion-card-content>
+                    </ion-card>
+                  </ion-list>
+                </ion-accordion>                
+              </ion-accordion-group>
+            </ion-list>
+          </ion-item>
+        </ion-list>
+      </ion-accordion>
+      <ion-accordion value="shapes" toggle-icon="arrow-down-circle">
+
+        <ion-item slot="header">
+          <ion-list>
+            <ion-item class="padding-5" lines="none">
+              <img slot="start" src="../../../assets/img/home-sheep.png" height="90px" />
+              <ion-label>
+                <h2>Sheep</h2>
+                <h3>01</h3>
+                <p>Listen, I've had a pretty messed up day...</p>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-item>
+
+        <ion-list slot="content">
+          <ion-item lines="none">
+            <ion-list inset="true">
+              <ion-accordion-group>
+                <ion-accordion value="colors" toggle-icon="arrow-down-circle">
+                  <ion-item slot="header" lines="none">
+                    <ion-list>
+                      <ion-item class="padding-5" lines="none" style="width: max-content;">
+                        <img slot="start" src="../../../assets/img/sheep.jpg" height="60px" />
+                        <ion-label>
+                          <h2>&#67; &#69; &#8710; 01</h2>
+                          <h3>Age: <b>2 years</b></h3>
+                          <p>health: <ion-icon style="color: #7f9e56;" name="pulse-outline"></ion-icon>
+                          </p>
+                        </ion-label>
+                      </ion-item>
+                    </ion-list>
+                  </ion-item>
+
+                  <ion-list slot="content">
+                    <ion-card class="details">
+                      <ion-card-header>
+                        <ion-card-subtitle>Brahman</ion-card-subtitle>
+                        <ion-card-title>AJS 129 09</ion-card-title>
+                      </ion-card-header>
+                      <ion-card-content>
+                        Founded in 1829 on an isthmus between Lake Monona and Lake Mendota, Madison was named the
+                        capital of the
+                        Wisconsin Territory in 1836.
+                      </ion-card-content>
+                    </ion-card>
+                  </ion-list>
+                </ion-accordion>
+              </ion-accordion-group>
+            </ion-list>
+          </ion-item>
+        </ion-list>
+      </ion-accordion>
+    </ion-accordion-group>
+  </ion-list>
+</ion-content>

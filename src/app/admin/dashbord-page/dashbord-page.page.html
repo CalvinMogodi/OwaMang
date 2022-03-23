@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>O Wa Mang</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-tabs >
+    <ion-tab-bar >
+    <ion-tab-button tab="approved-live-stock-page" [selected]="activeTab">
+      <ion-icon name="checkmark-circle"></ion-icon>
+      <ion-label>Approved Live Stock</ion-label>
+      <ion-badge>10</ion-badge>
+    </ion-tab-button>
+  
+    <ion-tab-button tab="pending-live-stock-page">
+      <ion-icon name="checkmark-circle-outline"></ion-icon>
+      <ion-label>Pending Live Stock</ion-label>
+      <ion-badge>2</ion-badge>
+    </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>

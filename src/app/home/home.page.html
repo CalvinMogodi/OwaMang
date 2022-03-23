@@ -1,0 +1,39 @@
+
+<ion-content>
+    <img src="../../assets/img/home.jpg"/>
+    <div class="login-background">
+      <ion-router-link href="guest-dashboard" (click)="goToGuestDashboard()" class="underline">Guest?</ion-router-link><br><br>
+     <hr class="line"/><br>
+      <ion-label class="title">Login</ion-label> 
+      <ion-item>
+        <ion-label position="floating">Username</ion-label>
+        <ion-input [(ngModel)]="username" required="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input [ngModel]="password" required="true" type="password" size="password" autocomplete="new-password"></ion-input>
+      </ion-item>
+      <br>
+        <ion-button expand="block" (click)="onLogin()">Login</ion-button>
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <ion-router-link href="register" (click)="goToRegister()"  class="underline">Register</ion-router-link>
+            </ion-col>
+            <ion-col>
+              <ion-router-link href="forgot-password" (click)="goToForgotPassword()"  class="underline">Forgot Password</ion-router-link>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+         
+    </div>  
+</ion-content>
+
+<!--<ion-footer class="ion-no-border">
+  <ion-toolbar> 
+    <div class="home-center">
+      Guset ? <ion-icon name="chevron-forward-outline"></ion-icon>  <ion-icon name="chevron-forward-outline"></ion-icon>
+    </div> 
+  </ion-toolbar>
+</ion-footer>-->
+ 

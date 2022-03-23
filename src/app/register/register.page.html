@@ -1,0 +1,44 @@
+
+<ion-content>
+  <img src="../../assets/img/home.jpg"/>
+  <div class="register-background">
+    <ion-label class="title">Create new account</ion-label> 
+    <ion-item>
+      <ion-label position="floating">Name</ion-label>
+      <ion-input required="true"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Surname</ion-label>
+      <ion-input required="true"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Username</ion-label>
+      <ion-input required="true"></ion-input>
+    </ion-item>
+    <ion-item (click)="showBrandmark()">
+      <ion-label position="stacked">Brandmark</ion-label>
+      <ion-grid style="width: 100%;">
+            <ion-row>
+              <ion-col size="1" *ngFor="let brandmark of brandmarks">
+                <div style="padding: 5px 0px 0px 5px;" [ngClass]="brandmark.class" [innerHTML]="brandmark.element"></div>
+              </ion-col>
+            </ion-row>   
+      </ion-grid>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">New Password</ion-label>
+      <ion-input required="true" type="password" size="password" autocomplete="new-password"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Confirm Password</ion-label>
+      <ion-input required="true" type="password" size="password" autocomplete="new-password"></ion-input>
+    </ion-item>
+
+    <p class="text" ng-style="{'color':'msgColor'}">
+      {{firstMsg}} <ion-router-link href="home" (click)="goToHome()" class="underline" [hidden]="!showLink">click here</ion-router-link> {{secondMsg}}
+    </p>
+    <br>
+      <ion-button expand="block" (click)="onSubmit()">Submit</ion-button>  
+  </div>  
+</ion-content>
+

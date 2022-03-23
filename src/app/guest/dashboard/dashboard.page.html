@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>O wa Mang</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="ion-padding" scroll-y="false">
+  <ion-slides>
+    <ion-slide *ngFor="let animal of lostAnimals">
+      <div class="slide">
+        <img src="../../../assets/img/cow{{animal}}.png" />
+        <h2>&#67; &#69; &#8710; 01</h2>Lost on 16-Feb-2022
+        <p>
+          The <b>ionic conference app</b> is a practical preview of the ionic framework in action, and a
+          demonstration of proper code use.
+        </p>
+        <ion-button (click)="report = true" color="warning" style="height: 30px;">Report</ion-button>
+        <ion-textarea [hidden]="!report" rows="6" cols="12" placeholder="Enter any notes here..."></ion-textarea>
+        <ion-button [hidden]="!report" expand="block" style="height: 30px;" color="primary">Submit</ion-button>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

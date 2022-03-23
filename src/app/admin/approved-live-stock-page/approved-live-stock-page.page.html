@@ -1,0 +1,460 @@
+<ion-content>
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="addStock()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <br/>
+
+  <ion-list inset="true">
+    <ion-accordion-group>
+      <ion-accordion value="cow0" toggle-icon="arrow-down-circle" [ngStyle]="{'background-color': 'url(' + backgroundcolor + ')'}">
+        <ion-item slot="header">
+          <ion-list>
+            <ion-item lines="none">
+              <div style="background-image: url(../../../assets/img/cow1.png)" class="img-fit">
+                <div class="dead center" *ngIf="isDead0">
+                  <ion-icon name="remove-circle-outline" style="color: red;font-size: 50px;"> </ion-icon><br/> <span style="font-weight: 900; color: white;">Dead</span>
+                </div>
+              </div>              
+              <ion-label>
+                <h2><span class="north">&#69;</span> <span class="north">&#67;</span> <span class="east">&#77;  </span> &nbsp; 129 09: <span>Brahman</span></h2>
+                <h3>Owner: <span>Owner Owner</span></h3>
+                <p>Age:<span>2 years</span> Color:<span>White</span></p>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-item>
+
+        <ion-list slot="content" style="background-color: {{backgroundcolor1}}">
+          <ion-card class="details">
+            <ion-card-header>
+              <ion-card-subtitle>Brahman</ion-card-subtitle>
+              <ion-card-title>AJS 129 09</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="6"><b>Owner: </b><span>Name Surname</span><br /></ion-col>
+                  <ion-col size="6"><b>Color: </b><span>White</span><br /></ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="6"><b>Age: </b><span>2 years</span><br /></ion-col>
+                  <ion-col size="6"><b>Date of birth: </b><span>15 March 2022</span><br /></ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="12"><b>Note:</b> <br />
+                    <p>More information here, more information here.More information here, more information here.More
+                      information here, more information here. </p>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+              <ion-footer>
+                <ion-row>
+                  <ion-col class="center" text-center style="background-color: #ffc409;color: #444343;" (click)="editStock()">
+                    <span><ion-icon name="create"></ion-icon>Edit</span>                   
+                  </ion-col>
+                  <ion-col *ngIf="!isDead0" class="center" text-center style="background-color: #000000;color: #ffffff;" (click)="backgroundcolor1 = 'black'; isDead0 = true">
+                    <span><ion-icon name="checkbox-outline"></ion-icon><span>Mark as Dead</span> </span> 
+                  </ion-col>
+                  <ion-col *ngIf="isDead0" class="center" text-center  style="background-color: #2dd36f;color: #ffffff;" (click)="backgroundcolor1 = ''; isDead0 = false">
+                    <span><ion-icon name="checkbox-outline"></ion-icon><span>E a pela</span> </span> 
+                  </ion-col>
+                </ion-row>
+              </ion-footer>
+            </ion-card-content>
+          </ion-card>
+        </ion-list>
+      </ion-accordion>
+
+      <ion-accordion value="colors" toggle-icon="arrow-down-circle">
+        <ion-item slot="header">
+          <ion-list>
+            <ion-item lines="none">
+              <div style="background-image: url(../../../assets/img/cow-img-1.jfif)" class="img-fit">
+                <div class="dead center">
+                  <ion-icon name="remove-circle-outline" style="color: red;font-size: 50px;"> </ion-icon><br/> <span style="font-weight: 900; color: white;">Dead</span>
+                </div></div>
+              <ion-label>
+                <h2><span class="north">&#69;</span> <span class="north">&#67;</span> <span class="east">&#77;  </span> &nbsp; 09: <span>Brahman</span></h2>
+                <h3>Owner: <span>Owner Owner</span></h3>
+                <p>Age:<span>2 years</span> Color:<span>White</span></p>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-item>
+
+        <ion-list slot="content" style="background-color: {{backgroundcolor}}">
+          <ion-card class="details">
+            <ion-card-header>
+              <ion-card-subtitle>Brahman</ion-card-subtitle>
+              <ion-card-title>&#66; &#68; &#70; 09</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="6"><b>Owner: </b><span>Name Surname</span><br /></ion-col>
+                  <ion-col size="6"><b>Color: </b><span>White</span><br /></ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="6"><b>Age: </b><span>2 years</span><br /></ion-col>
+                  <ion-col size="6"><b>Date of birth: </b><span>15 March 2022</span><br /></ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="12"><b>Note:</b> <br />
+                    <p>More information here, more information here.More information here, more information here.More
+                      information here, more information here. </p>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+              <ion-footer>
+                <ion-row>
+                  <ion-col class="center" text-center style="    background-color: #ffc409;
+                  color: #444343;">
+                    <span><ion-icon name="create"></ion-icon>Edit</span>                   
+                  </ion-col>
+                  <ion-col class="center" text-center  style="background-color: #2dd36f;color: #ffffff;">
+                    <span><ion-icon name="checkbox-outline"></ion-icon><span>E a pela</span> </span> 
+                  </ion-col>
+                </ion-row>
+              </ion-footer>
+            </ion-card-content>            
+          </ion-card>
+        </ion-list>
+      </ion-accordion>
+      <ion-accordion value="cow1" toggle-icon="arrow-down-circle">
+        <ion-item slot="header">
+          <ion-list>
+            <ion-item lines="none">
+              <img slot="start" src="../../../assets/img/cow2.png" height="90px" />
+              <ion-label>
+                <h2><span class="north">&#67;</span> <span class="north">&#69;</span> <span class="east">&#77;  </span> &nbsp;: <span>Brahman</span></h2>
+                <h3>Owner: <span>Owner Owner</span></h3>
+                <p>Age:<span>2 years</span> Color:<span>White</span></p>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-item>
+
+        <ion-list slot="content">
+          <ion-card class="details">
+            <ion-card-header>
+              <ion-card-subtitle>Brahman</ion-card-subtitle>
+              <ion-card-title>&#66; &#68; &#70; 129 09</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="6"><b>Owner: </b><span>Name Surname</span><br /></ion-col>
+                  <ion-col size="6"><b>Color: </b><span>White</span><br /></ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="6"><b>Age: </b><span>2 years</span><br /></ion-col>
+                  <ion-col size="6"><b>Date of birth: </b><span>15 March 2022</span><br /></ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="12"><b>Note:</b> <br />
+                    <p>More information here, more information here.More information here, more information here.More
+                      information here, more information here. </p>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-card-content>
+          </ion-card>
+        </ion-list>
+      </ion-accordion>
+      <ion-accordion value="cow2" toggle-icon="arrow-down-circle">
+        <ion-item slot="header">
+          <ion-list>
+            <ion-item lines="none">
+              <img slot="start" src="../../../assets/img/cow3.png" height="90px" />
+              <ion-label>
+                <h2>AJS 129 09: <span>Brahman</span></h2>
+                <h3>Owner: <span>Owner Owner</span></h3>
+                <p>Age:<span>2 years</span> Color:<span>White</span></p>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-item>
+
+        <ion-list slot="content">
+          <ion-card class="details">
+            <ion-card-header>
+              <ion-card-subtitle>Brahman</ion-card-subtitle>
+              <ion-card-title>AJS 129 09</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="6"><b>Owner: </b><span>Name Surname</span><br /></ion-col>
+                  <ion-col size="6"><b>Color: </b><span>White</span><br /></ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="6"><b>Age: </b><span>2 years</span><br /></ion-col>
+                  <ion-col size="6"><b>Date of birth: </b><span>15 March 2022</span><br /></ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="12"><b>Note:</b> <br />
+                    <p>More information here, more information here.More information here, more information here.More
+                      information here, more information here. </p>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-card-content>
+          </ion-card>
+        </ion-list>
+      </ion-accordion>
+      <ion-accordion value="cow3" toggle-icon="arrow-down-circle">
+        <ion-item slot="header">
+          <ion-list>
+            <ion-item lines="none">
+              <img slot="start" src="../../../assets/img/cow-img-1.jfif" height="90px" />
+              <ion-label>
+                <h2>AJS 129 09: <span>Brahman</span></h2>
+                <h3>Owner: <span>Owner Owner</span></h3>
+                <p>Age:<span>2 years</span> Color:<span>White</span></p>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-item>
+
+        <ion-list slot="content">
+          <ion-card class="details">
+            <ion-card-header>
+              <ion-card-subtitle>Brahman</ion-card-subtitle>
+              <ion-card-title>AJS 129 09</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="6"><b>Owner: </b><span>Name Surname</span><br /></ion-col>
+                  <ion-col size="6"><b>Color: </b><span>White</span><br /></ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="6"><b>Age: </b><span>2 years</span><br /></ion-col>
+                  <ion-col size="6"><b>Date of birth: </b><span>15 March 2022</span><br /></ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="12"><b>Note:</b> <br />
+                    <p>More information here, more information here.More information here, more information here.More
+                      information here, more information here. </p>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-card-content>
+          </ion-card>
+        </ion-list>
+      </ion-accordion>
+      <ion-accordion value="cow4" toggle-icon="arrow-down-circle">
+        <ion-item slot="header">
+          <ion-list>
+            <ion-item lines="none">
+              <img slot="start" src="../../../assets/img/home-cow.png" height="90px" />
+              <ion-label>
+                <h2>AJS 129 09: <span>Brahman</span></h2>
+                <h3>Owner: <span>Owner Owner</span></h3>
+                <p>Age:<span>2 years</span> Color:<span>White</span></p>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-item>
+
+        <ion-list slot="content">
+          <ion-card class="details">
+            <ion-card-header>
+              <ion-card-subtitle>Brahman</ion-card-subtitle>
+              <ion-card-title>AJS 129 09</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="6"><b>Owner: </b><span>Name Surname</span><br /></ion-col>
+                  <ion-col size="6"><b>Color: </b><span>White</span><br /></ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="6"><b>Age: </b><span>2 years</span><br /></ion-col>
+                  <ion-col size="6"><b>Date of birth: </b><span>15 March 2022</span><br /></ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="12"><b>Note:</b> <br />
+                    <p>More information here, more information here.More information here, more information here.More
+                      information here, more information here. </p>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-card-content>
+          </ion-card>
+        </ion-list>
+      </ion-accordion>
+      <ion-accordion value="cow5" toggle-icon="arrow-down-circle">
+        <ion-item slot="header">
+          <ion-list>
+            <ion-item lines="none">
+              <img slot="start" src="../../../assets/img/home-cow.png" height="90px" />
+              <ion-label>
+                <h2>AJS 129 09: <span>Brahman</span></h2>
+                <h3>Owner: <span>Owner Owner</span></h3>
+                <p>Age:<span>2 years</span> Color:<span>White</span></p>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-item>
+
+        <ion-list slot="content">
+          <ion-card class="details">
+            <ion-card-header>
+              <ion-card-subtitle>Brahman</ion-card-subtitle>
+              <ion-card-title>AJS 129 09</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="6"><b>Owner: </b><span>Name Surname</span><br /></ion-col>
+                  <ion-col size="6"><b>Color: </b><span>White</span><br /></ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="6"><b>Age: </b><span>2 years</span><br /></ion-col>
+                  <ion-col size="6"><b>Date of birth: </b><span>15 March 2022</span><br /></ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="12"><b>Note:</b> <br />
+                    <p>More information here, more information here.More information here, more information here.More
+                      information here, more information here. </p>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-card-content>
+          </ion-card>
+        </ion-list>
+      </ion-accordion>
+      <ion-accordion value="cow6" toggle-icon="arrow-down-circle">
+        <ion-item slot="header">
+          <ion-list>
+            <ion-item lines="none">
+              <img slot="start" src="../../../assets/img/home-cow.png" height="90px" />
+              <ion-label>
+                <h2>AJS 129 09: <span>Brahman</span></h2>
+                <h3>Owner: <span>Owner Owner</span></h3>
+                <p>Age:<span>2 years</span> Color:<span>White</span></p>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-item>
+
+        <ion-list slot="content">
+          <ion-card class="details">
+            <ion-card-header>
+              <ion-card-subtitle>Brahman</ion-card-subtitle>
+              <ion-card-title>AJS 129 09</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="6"><b>Owner: </b><span>Name Surname</span><br /></ion-col>
+                  <ion-col size="6"><b>Color: </b><span>White</span><br /></ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="6"><b>Age: </b><span>2 years</span><br /></ion-col>
+                  <ion-col size="6"><b>Date of birth: </b><span>15 March 2022</span><br /></ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="12"><b>Note:</b> <br />
+                    <p>More information here, more information here.More information here, more information here.More
+                      information here, more information here. </p>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-card-content>
+          </ion-card>
+        </ion-list>
+      </ion-accordion>
+      <ion-accordion value="cow7" toggle-icon="arrow-down-circle">
+        <ion-item slot="header">
+          <ion-list>
+            <ion-item lines="none">
+              <img slot="start" src="../../../assets/img/home-cow.png" height="90px" />
+              <ion-label>
+                <h2>AJS 129 09: <span>Brahman</span></h2>
+                <h3>Owner: <span>Owner Owner</span></h3>
+                <p>Age:<span>2 years</span> Color:<span>White</span></p>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-item>
+
+        <ion-list slot="content">
+          <ion-card class="details">
+            <ion-card-header>
+              <ion-card-subtitle>Brahman</ion-card-subtitle>
+              <ion-card-title>AJS 129 09</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="6"><b>Owner: </b><span>Name Surname</span><br /></ion-col>
+                  <ion-col size="6"><b>Color: </b><span>White</span><br /></ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="6"><b>Age: </b><span>2 years</span><br /></ion-col>
+                  <ion-col size="6"><b>Date of birth: </b><span>15 March 2022</span><br /></ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="12"><b>Note:</b> <br />
+                    <p>More information here, more information here.More information here, more information here.More
+                      information here, more information here. </p>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-card-content>
+          </ion-card>
+        </ion-list>
+      </ion-accordion>
+
+      <ion-accordion value="shapes" toggle-icon="arrow-down-circle" *ngIf="isAdded">
+        <ion-item slot="header">
+          <ion-list>
+            <ion-item class="padding-5" lines="none">
+              <img slot="start" src="../../../assets/img/home-sheep.png" height="90px" />
+              <ion-label>
+                <h2>AJS 129 09: <span>Brahman</span></h2>
+                <h3>Owner: <span>Owner Owner</span></h3>
+                <p>Age:<span>2 years</span> Color:<span>White</span></p>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-item>
+
+        <ion-list slot="content">
+          <ion-card class="details">
+            <ion-card-header>
+              <ion-card-subtitle>Brahman</ion-card-subtitle>
+              <ion-card-title>AJS 129 09</ion-card-title>
+            </ion-card-header>
+            <ion-card-content>
+              <ion-grid>
+                <ion-row>
+                  <ion-col size="6"><b>Owner: </b><span>Name Surname</span><br /></ion-col>
+                  <ion-col size="6"><b>Color: </b><span>White</span><br /></ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="6"><b>Age: </b><span>2 years</span><br /></ion-col>
+                  <ion-col size="6"><b>Date of birth: </b><span>15 March 2022</span><br /></ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="6"><b>Age: </b><span>2 years</span><br /></ion-col>
+                  <ion-col size="6"><b>Date of birth: </b><span>15 March 2022</span><br /></ion-col>
+                </ion-row>
+                <ion-row>
+                  <ion-col size="12"><b>Note:</b> <br />
+                    <p>More information here, more information here.More information here, more information here.More
+                      information here, more information here. </p>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-card-content>
+          </ion-card>
+        </ion-list>
+      </ion-accordion>
+    </ion-accordion-group>
+  </ion-list>
+</ion-content>
