@@ -1,0 +1,167 @@
+/* Position text in the middle of the page/image */
+.bg-text {
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 64%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 95%;
+    padding: 20px;
+  }
+
+  .background{
+    height: 100%;
+    text-align: center;
+    background-color: whitesmoke;
+    //background: conic-gradient(from 270deg, rgb(159, 255, 167), rgb(233, 241, 233));
+    //background-repeat: no-repeat;
+    //background: url(../../../assets/img/mmcBackground1.jpg) no-repeat center center fixed;
+  }
+
+  .card{
+    background-color: #f4f5f8;
+    border-radius: 13px;
+    box-shadow: 6px 3px 9px 2px #888888;
+    margin-bottom: 25px;
+  }
+
+  .img-background{
+    background-image: radial-gradient(circle farthest-side at top, #000, #DEE);
+    border-radius: 7px 0px 0px 7px;   
+  }
+
+  .breed-name{
+    color: lightgray;
+    font-family: sans-serif;
+  }
+
+  .total{
+    color: #292929;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+
+  .line{
+    border-bottom: gray solid 1px;
+    width: 90%;
+  }
+
+  .farmer-name{
+    font-weight: bolder;
+    font-size: larger;
+    font-family: sans-serif;
+    color: #292929;
+  }
+
+  .address{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .mark{
+    color: gray;
+    font-size: 20px;
+    font-family: monospace;
+    margin: 2px;
+  }
+
+.mark-border{
+    border-right: dashed 0.5px lightgray;
+}
+
+.available-amount{
+    color: green;
+    font-weight: bold;
+}
+
+.reserved-amount{
+    color: #f0ad4e;
+    font-weight: bold;
+}
+
+.start{
+    text-align: start;
+}
+
+.end{
+    text-align: end;
+}
+
+.header{
+    height: 30%;
+    background: rgb(2,0,36);
+    background: linear-gradient(195deg, rgba(2,0,36,1) 0%, rgba(14,67,137,1) 50%, rgba(0,212,255,1) 100%);
+    padding: 25px;
+}
+
+.title{
+    padding: 25px 0px 0px 0px;
+}
+
+.title-header{
+    color: #bddefc;
+    font-size: x-large;
+    font-family: sans-serif;
+}
+
+.title-count{
+    color: #97b1c9;
+    font-size: large;
+}
+
+.reserve-col{
+    padding: 25px 0px 0px 0px;
+}
+
+.reserve-btn{
+    width: 100%;
+    height: 100%;
+    background-color: #27adf2;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 25px;
+    height: 35px;
+}
+
+.sc-ion-searchbar-md-h{
+    background: transparent;
+    border-radius: 25px;
+}
+
+.company-details{
+    background-color: #1a69c6;
+    width: 70%;
+    border-left: #27adf2 5px solid;
+    border-radius: 5px;
+    position: relative;
+    color: #ffffff;
+    height: 100px;
+    text-align: start;
+    left: 15%;
+    padding: 20px 0px 0px 20px;
+    top: -5%;
+    z-index: 9;
+}
+
+
+.company-details-p{
+    color: #FFF;
+}
+
+.customer-total{
+    color: #fff;
+    font-weight: bold;
+}
+
+.customers{
+    padding: 25% 15px 0px 15px;
+    top: -13%;
+    overflow-y: auto;
+    position: relative;
+    height: 70%;
+}

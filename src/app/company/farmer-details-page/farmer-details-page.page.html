@@ -1,0 +1,84 @@
+<ion-content>
+    <div class="header start">      
+      <ion-icon (click)="onBack()" name="arrow-back-outline" class="cancel-search"></ion-icon>     
+    </div>
+
+    <div class="farmer-placeholder">
+        <img height="90" src="../../../assets/img/farmer-placeholder1.png"/>
+    </div>
+    <div class="customer">   
+      <ion-label>
+        <h2 class="title-header">Rudolf Steiner</h2>
+        <p class="sub-title">17 Edge rd, East London, Gauteng, 2158</p>
+      </ion-label>
+
+      <div class="amounts">
+        <ion-row>
+          <ion-col class="start">
+            <ion-label>
+              <p>Total Value</p>
+              <span class="total-amount">R19 547.00</span>
+            </ion-label>
+          </ion-col>
+          <ion-col class="center">
+            <ion-label>
+              <p>Reserved Amount</p>
+              <span class="reserved-amount">R10 547.00</span>
+            </ion-label>
+          </ion-col>
+          <ion-col class="end">
+            <ion-label>
+              <p>Available Amount</p>
+              <span class="available-amount">R415 124.00</span>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col class="start">
+            <ion-label>
+              <p>Total Cattles</p>
+              <span class="amount">819 547</span>
+            </ion-label>
+          </ion-col>
+          <ion-col class="center">
+            <ion-label>
+              <p>Lost Cattles</p>
+              <span class="amount">547</span>
+            </ion-label>
+          </ion-col>
+          <ion-col class="end">
+            <ion-label>
+              <p>Found Cattles</p>
+              <span class="amount">12</span>
+            </ion-label>
+          </ion-col>
+        </ion-row>
+      </div>
+
+     <h1>History</h1>
+     <hr class="line"/>
+      <div class="chart">
+          <canvas height="55" #lineCanvas width="90"></canvas>
+      </div>
+    </div>
+    <div class="reserve-amount">
+      <ion-item>
+        <ion-label position="fixed">Amount</ion-label>
+        <ion-input inputmode="decimal" [(ngModel)]="reserveAmount"></ion-input>
+      </ion-item>
+    </div>
+</ion-content>
+
+<ion-footer class="footer"> 
+  <ion-grid>
+    <ion-row>
+      <ion-col (click)="onCancel()" size="6" class="center right-border" >
+        <span>CANCEL</span>
+      </ion-col>
+      <ion-col (click)="onReserve()" size="6" class="center">
+        <span>{{reserveText}}</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

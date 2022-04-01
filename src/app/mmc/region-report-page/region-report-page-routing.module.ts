@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: RegionReportPagePage
+  },
+  {
+    path: 'region-farmer-page',
+    loadChildren: () => import('./region-farmer-page/region-farmer-page.module').then( m => m.RegionFarmerPagePageModule)
   }
 ];
 

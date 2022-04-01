@@ -1,0 +1,97 @@
+.footer{
+    width: 100%;
+    padding: 15px;
+    height: 8%;
+    background-color: #27adf2;
+    color: #fff;
+    font-size: 18px;
+}
+
+.right-border {
+    border-right: solid 2px lightgray;
+}
+.center{
+    text-align: center;
+}
+
+.header{
+    height: 25%;
+    text-align: center;
+    background: url('../../../assets/img/cattleFarming.jfif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 25px;
+}
+
+.cancel-search{
+    font-size: x-large;
+    color: silver;
+}
+
+.farmer-placeholder{
+    width: fit-content;
+    background: transparent;
+    z-index: 9;
+    position: relative;
+    left: 40%;
+    top: -50px;
+}
+
+.title-header{
+    color: #292929;
+    font-size: x-large;
+    font-family: sans-serif;
+}
+
+.sub-title{
+    font-size: large;
+}
+
+.customer{
+    text-align: center;
+    top: -5%;
+    position: relative;
+}
+
+.amounts{
+    padding: 15px;
+}
+.available-amount{
+    color: green;
+    font-weight: bold;
+}
+
+.reserved-amount{
+    color: red;
+    font-weight: bold;
+}
+
+.start{
+    text-align: start;
+}
+
+.end{
+    text-align: end;
+}
+
+.total-amount{
+    color: #d79830;
+    font-weight: bold;
+}
+
+.amount{
+    font-weight: bold;
+}
+
+.chart{
+    padding: 0px 15px;
+}
+
+.line{
+    border-bottom: gray solid 1px;
+    width: 88px;
+  }
+
+  .reserve-amount{
+      margin-top: -15px;
+  }

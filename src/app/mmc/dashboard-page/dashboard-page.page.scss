@@ -49,3 +49,66 @@ body, html {
     margin: unset !important;
     font-weight: 100;
   }
+
+  .background{
+    background-repeat: no-repeat;
+    background: url(../../../assets/img/mmcBackground1.jpg) no-repeat center center fixed;
+    height: 100%;
+    text-align: center;
+  }
+
+  .donut-inner {
+    margin-top: -55%;
+    margin-bottom: 100px;
+ }
+ .donut-inner h5 {
+    margin-bottom: 5px;
+    margin-top: 0;
+ }
+ .donut-inner span {
+    font-size: 16px;
+    color: #FFFFFF;
+ }
+
+ .doughnutCanvas{
+  margin-top: 30%;
+ }
+
+ .footer{
+  position: fixed;
+  bottom: 122px;
+  text-align: center;
+  width: 90%;
+ }
+
+ .total{
+  font-size: xxx-large;
+  font-weight: lighter;
+ }
+
+ .gray{
+  color: lightgray;
+ }
+
+ .orange{
+  color: #ffc409;
+ }
+
+ .red{
+  color: #eb445a;
+ }
+
+ .green{
+  color: #2dd36f;
+ }
+
+ .underline{
+   text-decoration: underline;
+ }
+
+ .header{
+  font-weight: lighter;
+  color: silver;
+  font-size: xx-large;
+  font-family: ui-monospace;
+ }

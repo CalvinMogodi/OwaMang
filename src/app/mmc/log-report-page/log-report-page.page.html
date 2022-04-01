@@ -1,9 +1,21 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>logReportPage</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <div class="regionBackground background"></div>
+  <div class="bg-text">
+    <div class="ion-padding ">
+      <ion-buttons (click)="goBack()" slot="start" style="top: 5%; position: fixed; margin-left: 15px;">
+        <ion-icon style="font-size: x-large;" name="arrow-back-outline"></ion-icon>
+      </ion-buttons>
+      <div class="center">
+        <h1 class="header">O WA MANG</h1>
+        <h1>New Records</h1>
+      </div>
+      <div class="barCanvas" style="margin-top: 10%;">
+        <canvas style="height:25vh" #barCanvas width="170"></canvas>
+      </div>     
+      <div class="footer center">
+        <p style="font-size: 20px;"> New records for total: <span class="green" style="font-size: 25px;"> {{total}}</span></p>
+      </div>
 
+    </div>
+  </div>
 </ion-content>

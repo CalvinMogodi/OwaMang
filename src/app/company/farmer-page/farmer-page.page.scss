@@ -1,0 +1,108 @@
+.header{
+    height: 25%;
+    text-align: center;
+    background: linear-gradient(195deg, rgba(2,0,36,1) 0%, rgba(14,67,137,1) 50%, rgba(0,212,255,1) 100%);
+    padding: 25px;
+}
+
+.card{
+    background-color: #f4f5f8;
+    border-radius: 13px;
+    box-shadow: 6px 3px 9px 2px #888888;
+    margin-bottom: 25px;
+  }
+
+  .end{
+    text-align: end;
+}
+
+.title{
+    padding: 25px 0px 0px 0px;
+}
+
+.title-header{
+    color: #bddefc;
+    font-size: x-large;
+    font-family: sans-serif;
+}
+
+.cancel-btn{
+    width: 100%;
+    background-color: #e4e9f1;
+    color: darkslategray;
+    font-size: 18px;
+    border-radius: 25px;
+    height: 35px;
+}
+
+.reserve-col{
+    padding: 25px 0px 0px 0px;
+}
+
+.sub-title{
+    color: #97b1c9;
+    font-size: large;
+}
+
+.customers{
+    padding: 15px;
+    top: -1%;
+    overflow-y: auto;
+    position: relative;
+    height: 70%;
+}
+
+.img-background{
+    background-image: radial-gradient(circle farthest-side at top, #000, #DEE);
+    border-radius: 7px 0px 0px 7px;   
+  }
+
+  .breed-name{
+    color: lightgray;
+    font-family: sans-serif;
+  }
+
+  .total{
+    color: #292929;
+    font-weight: bold;
+    font-family: sans-serif;
+  }
+
+  .line{
+    border-bottom: gray solid 1px;
+    width: 90%;
+  }
+
+  .farmer-name{
+    font-weight: bolder;
+    font-size: larger;
+    font-family: sans-serif;
+    color: #292929;
+  }
+
+  .address{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .mark{
+    color: gray;
+    font-size: 20px;
+    font-family: monospace;
+    margin: 2px;
+  }
+
+.mark-border{
+    border-right: dashed 0.5px lightgray;
+}
+
+.available-amount{
+    color: green;
+    font-weight: bold;
+}
+
+.reserved-amount{
+    color: #f0ad4e;
+    font-weight: bold;
+}

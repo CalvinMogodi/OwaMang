@@ -1,9 +1,55 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>regionReportPage</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <div class="regionBackground background"></div>
+  <div class="bg-text">
+    <div class="ion-padding ">
+      <ion-buttons (click)="goBack()" slot="start" style="top: 5%; position: fixed; margin-left: 15px;">
+        <ion-icon style="font-size: x-large;" name="arrow-back-outline"></ion-icon>
+      </ion-buttons>
+      <div class="center">
+        <h1 class="header">O WA MANG</h1>
+        <h1>Regions</h1>
+      </div>
+      <div style="margin-top: 10%;">
+        <div class="barCanvas" style="margin-top: 10%;">
+          <canvas #barCanvas></canvas>
+        </div> 
+        <ion-list style="background-color: transparent;">                
+          <ion-item color="none" class="item" (click)="goToFarmers()">
+            <ion-label>
+              <h2 class="farmer-name">Capricorn</h2>             
+            </ion-label>
+            <ion-button fill="outline" slot="end" (click)="isPopoverOpen=!isPopoverOpen">View Farmers</ion-button>
+          </ion-item>
+      
+          <ion-item color="none">
+            <ion-label>
+              <h2 class="farmer-name">Mopani</h2>
+            </ion-label>
+            <ion-button fill="outline" slot="end">View Farmers</ion-button>
+          </ion-item>
 
+          <ion-item color="none">
+            <ion-label>
+              <h2 class="farmer-name">Sekhukhune</h2>
+            </ion-label>
+            <ion-button fill="outline" slot="end">View Farmers</ion-button>
+          </ion-item>
+      
+          <ion-item color="none">
+            <ion-label>
+              <h2 class="farmer-name">Vhembe</h2>
+            </ion-label>
+            <ion-button fill="outline" slot="end">View Farmers</ion-button>
+          </ion-item>
+
+          <ion-item color="none">
+            <ion-label>
+              <h2 class="farmer-name">Waterberg</h2>
+            </ion-label>
+            <ion-button fill="outline" slot="end">View Farmers</ion-button>
+          </ion-item>      
+        </ion-list>     
+      </div>
+    </div>
+  </div>
 </ion-content>

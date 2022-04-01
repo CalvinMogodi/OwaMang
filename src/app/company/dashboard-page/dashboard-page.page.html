@@ -1,0 +1,362 @@
+<ion-content>
+  <div class="background">
+    <div class="header">
+      <ion-searchbar (click)="showBrandmark(false)" style="background: transparent;" showCancelButton="focus" cancelButtonText="Custom Cancel"></ion-searchbar>
+      <ion-row>
+        <ion-col size="8" class="start title">
+          <ion-label>
+            <h2 class="title-header">My Customers</h2>
+            <p class="title-count">82</p>
+          </ion-label>
+        </ion-col>
+        <ion-col size="4" class="reserve-col">
+          <button class="reserve-btn" (click)="showBrandmark(true)">Reserve</button>
+        </ion-col>
+      </ion-row>
+    </div>
+    <div class="company-details">
+      <ion-label>
+        <h2 class="title-header">Mogz Group Ltd</h2>
+        <p class="company-details-p">Total Reserved Amount: <span class="customer-total">R56 122 121.29</span> </p>
+      </ion-label>
+
+    </div>
+    <div class="customers">
+      <div class="card" (click)="openFarmerDetails()">
+        <ion-row>
+          <ion-col size="3" class="img-background">
+            <img height="80" width="100" src="../../../assets/img/breeds/Afrikaner.jpg">
+            <ion-label>
+              <h2 class="breed-name">Afrikaner</h2>
+              <span class="total">2 124 454</span>
+            </ion-label>
+          </ion-col>
+          <ion-col size="9">
+            <ion-row>
+              <ion-col size="2" class="mark-border">
+                <span class="north mark">&#82;</span> <span class="north mark">&#67;</span>
+                <br /> <span class="north mark">&#8635;</span> <span class="north mark">0</span>
+                <br /> <span class="north mark">0</span> <span class="north mark">1</span>
+              </ion-col>
+              <ion-col size="10">
+                <ion-label>
+                  <h2 class="farmer-name">Masanobu Fukuoka</h2>
+                  <hr class="line" />
+                  <p class="address">17 The Beacon, Beacon Bay North,East London, Gauteng, 2012 </p>
+                </ion-label>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="start">
+                <ion-label>
+                  <p>Reserved</p>
+                  <span class="reserved-amount">R 9 584 547.00</span>
+                </ion-label>
+              </ion-col>
+              <ion-col class="end">
+                <ion-label class="available-amount">
+                  <p>Available</p>
+                  <span>R 10 000 00.00</span>
+                </ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="card" *ngIf="!searched" (click)="openFarmerDetails()">
+        <ion-row>
+          <ion-col size="3" class="img-background">
+            <img height="70" width="100" src="../../../assets/img/breeds/Beefmaster.jpg">
+            <ion-label>
+              <h2 class="breed-name">Beefmaster</h2>
+              <span class="total">454</span>
+            </ion-label>
+          </ion-col>
+          <ion-col size="9">
+            <ion-row>
+              <ion-col size="2" class="mark-border">
+                <span class="north mark">&#77;</span> <span class="north mark">&#8872;</span>
+                <br /> <span class="north mark">&#88;</span> <span class="north mark">0</span>
+                <br /> <span class="north mark">0</span> <span class="north mark">9</span>
+              </ion-col>
+              <ion-col size="10">
+                <ion-label>
+                  <h2 class="farmer-name">Lady Eve Balfour</h2>
+                  <hr class="line" />
+                  <p class="address">118 North Bay, East London, Gauteng, 2012 </p>
+                </ion-label>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="start">
+                <ion-label>
+                  <p>Reserved</p>
+                  <span class="reserved-amount">R 100 547.00</span>
+                </ion-label>
+              </ion-col>
+              <ion-col class="end">
+                <ion-label class="available-amount">
+                  <p>Available</p>
+                  <span>R0.00</span>
+                </ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="card" *ngIf="!searched" (click)="openFarmerDetails()">
+        <ion-row>
+          <ion-col size="3" class="img-background">
+            <img height="80" width="100" src="../../../assets/img/breeds/Brahman.jpg">
+            <ion-label>
+              <h2 class="breed-name">Brahman</h2>
+              <span class="total">938 621</span>
+            </ion-label>
+          </ion-col>
+          <ion-col size="9">
+            <ion-row>
+              <ion-col size="2" class="mark-border">
+                <span class="north mark">&#8954;</span> <span class="north mark">&#67;</span>
+                <br /> <span class="north mark">&#88;</span> <span class="north mark">0</span>
+                <br /> <span class="north mark">7</span> <span class="north mark">9</span>
+              </ion-col>
+              <ion-col size="10">
+                <ion-label>
+                  <h2 class="farmer-name">Masanobu Fukuoka</h2>
+                  <hr class="line" />
+                  <p class="address">17 The Beacon, Beacon Bay North,East London, Gauteng, 2012 </p>
+                </ion-label>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="start">
+                <ion-label>
+                  <p>Reserved</p>
+                  <span class="reserved-amount">R584 547.00</span>
+                </ion-label>
+              </ion-col>
+              <ion-col class="end">
+                <ion-label class="available-amount">
+                  <p>Available</p>
+                  <span>R10 000 00.00</span>
+                </ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="card" *ngIf="!searched" (click)="openFarmerDetails()">
+        <ion-row>
+          <ion-col size="3" class="img-background">
+            <img height="80" width="100" src="../../../assets/img/breeds/Brahman.jpg">
+            <ion-label>
+              <h2 class="breed-name">Brahman</h2>
+              <span class="total">14 578</span>
+            </ion-label>
+          </ion-col>
+          <ion-col size="9">
+            <ion-row>
+              <ion-col size="2" class="mark-border">
+                <span class="north mark">&#8635;</span> <span class="north mark">&#67;</span>
+                <br /> <span class="north mark">&#88;</span> <span class="north mark">0</span>
+                <br /> <span class="north mark">8</span> <span class="north mark">1</span>
+              </ion-col>
+              <ion-col size="10">
+                <ion-label>
+                  <h2 class="farmer-name">Rudolf Steiner</h2>
+                  <hr class="line" />
+                  <p class="address">17 The Beacon, Beacon Bay North,East London, Gauteng, 2012 </p>
+                </ion-label>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="start">
+                <ion-label>
+                  <p>Reserved</p>
+                  <span class="reserved-amount">R10 547.00</span>
+                </ion-label>
+              </ion-col>
+              <ion-col class="end">
+                <ion-label class="available-amount">
+                  <p>Available</p>
+                  <span>R415 124.00</span>
+                </ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="card" *ngIf="!searched" (click)="openFarmerDetails()">
+        <ion-row>
+          <ion-col size="3" class="img-background">
+            <img height="80" width="100" src="../../../assets/img/breeds/Afrikaner.jpg">
+            <ion-label>
+              <h2 class="breed-name">Afrikaner</h2>
+              <span class="total">2 124 454</span>
+            </ion-label>
+          </ion-col>
+          <ion-col size="9">
+            <ion-row>
+              <ion-col size="2" class="mark-border">
+                <span class="north mark">&#82;</span> <span class="north mark">&#67;</span>
+                <br /> <span class="north mark">&#8635;</span> <span class="north mark">0</span>
+                <br /> <span class="north mark">0</span> <span class="north mark">1</span>
+              </ion-col>
+              <ion-col size="10">
+                <ion-label>
+                  <h2 class="farmer-name">Masanobu Fukuoka</h2>
+                  <hr class="line" />
+                  <p class="address">17 The Beacon, Beacon Bay North,East London, Gauteng, 2012 </p>
+                </ion-label>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="start">
+                <ion-label>
+                  <p>Reserved</p>
+                  <span class="reserved-amount">R 9 584 547.00</span>
+                </ion-label>
+              </ion-col>
+              <ion-col class="end">
+                <ion-label class="available-amount">
+                  <p>Available</p>
+                  <span>R 10 000 00.00</span>
+                </ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="card" *ngIf="!searched" (click)="openFarmerDetails()">
+        <ion-row>
+          <ion-col size="3" class="img-background">
+            <img height="70" width="100" src="../../../assets/img/breeds/Beefmaster.jpg">
+            <ion-label>
+              <h2 class="breed-name">Beefmaster</h2>
+              <span class="total">454</span>
+            </ion-label>
+          </ion-col>
+          <ion-col size="9">
+            <ion-row>
+              <ion-col size="2" class="mark-border">
+                <span class="north mark">&#77;</span> <span class="north mark">&#8872;</span>
+                <br /> <span class="north mark">&#88;</span> <span class="north mark">0</span>
+                <br /> <span class="north mark">0</span> <span class="north mark">9</span>
+              </ion-col>
+              <ion-col size="10">
+                <ion-label>
+                  <h2 class="farmer-name">Lady Eve Balfour</h2>
+                  <hr class="line" />
+                  <p class="address">118 North Bay, East London, Gauteng, 2012 </p>
+                </ion-label>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="start">
+                <ion-label>
+                  <p>Reserved</p>
+                  <span class="reserved-amount">R 100 547.00</span>
+                </ion-label>
+              </ion-col>
+              <ion-col class="end">
+                <ion-label class="available-amount">
+                  <p>Available</p>
+                  <span>R0.00</span>
+                </ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="card" *ngIf="!searched" (click)="openFarmerDetails()">
+        <ion-row>
+          <ion-col size="3" class="img-background">
+            <img height="80" width="100" src="../../../assets/img/breeds/Brahman.jpg">
+            <ion-label>
+              <h2 class="breed-name">Brahman</h2>
+              <span class="total">938 621</span>
+            </ion-label>
+          </ion-col>
+          <ion-col size="9">
+            <ion-row>
+              <ion-col size="2" class="mark-border">
+                <span class="north mark">&#8954;</span> <span class="north mark">&#67;</span>
+                <br /> <span class="north mark">&#88;</span> <span class="north mark">0</span>
+                <br /> <span class="north mark">7</span> <span class="north mark">9</span>
+              </ion-col>
+              <ion-col size="10">
+                <ion-label>
+                  <h2 class="farmer-name">Masanobu Fukuoka</h2>
+                  <hr class="line" />
+                  <p class="address">17 The Beacon, Beacon Bay North,East London, Gauteng, 2012 </p>
+                </ion-label>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="start">
+                <ion-label>
+                  <p>Reserved</p>
+                  <span class="reserved-amount">R584 547.00</span>
+                </ion-label>
+              </ion-col>
+              <ion-col class="end">
+                <ion-label class="available-amount">
+                  <p>Available</p>
+                  <span>R10 000 00.00</span>
+                </ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div class="card" *ngIf="!searched" (click)="openFarmerDetails()">
+        <ion-row>
+          <ion-col size="3" class="img-background">
+            <img height="80" width="100" src="../../../assets/img/breeds/Brahman.jpg">
+            <ion-label>
+              <h2 class="breed-name">Brahman</h2>
+              <span class="total">14 578</span>
+            </ion-label>
+          </ion-col>
+          <ion-col size="9">
+            <ion-row>
+              <ion-col size="2" class="mark-border">
+                <span class="north mark">&#8635;</span> <span class="north mark">&#67;</span>
+                <br /> <span class="north mark">&#88;</span> <span class="north mark">0</span>
+                <br /> <span class="north mark">8</span> <span class="north mark">1</span>
+              </ion-col>
+              <ion-col size="10">
+                <ion-label>
+                  <h2 class="farmer-name">Rudolf Steiner</h2>
+                  <hr class="line" />
+                  <p class="address">17 The Beacon, Beacon Bay North,East London, Gauteng, 2012 </p>
+                </ion-label>
+              </ion-col>
+            </ion-row>
+            <ion-row>
+              <ion-col class="start">
+                <ion-label>
+                  <p>Reserved</p>
+                  <span class="reserved-amount">R10 547.00</span>
+                </ion-label>
+              </ion-col>
+              <ion-col class="end">
+                <ion-label class="available-amount">
+                  <p>Available</p>
+                  <span>R415 124.00</span>
+                </ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+  </div>
+</ion-content>

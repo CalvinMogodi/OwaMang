@@ -49,3 +49,35 @@
     height: 60px;
     background-color: #7fa35a;
 }
+
+.east {
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    position: relative;
+    transform: rotate(90deg);
+}
+.south {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    position: relative;
+    transform: rotate(180deg);
+}
+.west {
+    -webkit-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    position: relative;
+    transform: rotate(270deg);
+}
+
+.searchbar-input.sc-ion-searchbar-md{
+    background: transparent;
+    border-radius: 25px;
+    color: #fff;
+    border: #5a7eb2 solid;
+}

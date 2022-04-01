@@ -156,6 +156,7 @@ export class BrandmarksPage implements OnInit {
   }
 
   onBrandmarkSelect(brandmark){
+    if(this.selectBrandmarks.length < 18)
     this.selectBrandmarks.push(brandmark);
   }
 
@@ -170,7 +171,14 @@ export class BrandmarksPage implements OnInit {
     // using the injected ModalController this page
     // can "dismiss" itself and optionally pass back data
     this.modalController.dismiss({
-      'dismissed': true,
+      isCancel: false,
+      brandmarks: this.selectBrandmarks
+    });
+  }
+
+  onCancel(){
+    this.modalController.dismiss({
+      isCancel: true,
       brandmarks: this.selectBrandmarks
     });
   }

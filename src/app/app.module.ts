@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SplashPage } from './splash/splash.page';
 import { HomePage } from './home/home.page';
+import { Chart } from 'chart.js';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,5 +21,8 @@ import { HomePage } from './home/home.page';
     HomePage,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
+  exports: [
+    Chart
+  ],
 })
 export class AppModule {}

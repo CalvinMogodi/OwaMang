@@ -21,7 +21,7 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
   },
   {
-    path: 'guest-dashboard',
+    path: 'guest',
     loadChildren: () => import('./guest/dashboard/dashboard.module').then( m => m.DashboardPageModule)
   },
   {
@@ -33,7 +33,7 @@ const routes: Routes = [
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
   },
   {
-    path: 'farmer-dashboard',
+    path: 'farmer',
     loadChildren: () => import('./farmer/dashboard/dashboard.module').then( m => m.DashboardPageModule)
   },
   {
@@ -41,7 +41,7 @@ const routes: Routes = [
     loadChildren: () => import('./brandmarks/brandmarks.module').then( m => m.BrandmarksPageModule)
   },
   {
-    path: 'capturer-dashboard',
+    path: 'capturer',
     loadChildren: () => import('./capturer/dashboard/dashboard.module').then( m => m.DashboardPageModule)
   },
   {
@@ -52,11 +52,11 @@ const routes: Routes = [
     path: 'location-autocomplete',
     loadChildren: () => import('./location-autocomplete/location-autocomplete.module').then( m => m.LocationAutocompletePageModule)
   },{
-    path: 'admin-dashboard',
+    path: 'admin',
     loadChildren: () => import('../app/admin/dashbord-page/dashbord-page.module').then( m => m.DashbordPagePageModule)
   },
   {
-    path: 'admin-dashboard',
+    path: 'admin',
     component: DashbordPagePage,
     children:[
       {
@@ -73,7 +73,7 @@ const routes: Routes = [
     loadChildren: () => import('./admin/add-edit-live-stock-page/add-edit-live-stock-page.module').then( m => m.AddEditLiveStockPagePageModule)
   },
   {
-    path: 'mmc-dashboard-page',
+    path: 'mmc',
     loadChildren: () => import('./mmc/dashboard-page/dashboard-page.module').then( m => m.DashboardPagePageModule)
   },
   {
@@ -92,7 +92,26 @@ const routes: Routes = [
     path: 'audit-report-page',
     loadChildren: () => import('./mmc/audit-report-page/audit-report-page.module').then( m => m.AuditReportPagePageModule)
   },
- 
+  {
+    path: 'region-farmers-page',
+    loadChildren: () => import('./mmc/region-report-page/region-farmer-page/region-farmer-page.module').then( m => m.RegionFarmerPagePageModule)
+  },
+  {
+    path: 'breed-page',
+    loadChildren: () => import('./breed/breed-page/breed-page.module').then( m => m.BreedPagePageModule)
+  },
+  {
+    path: 'company',
+    loadChildren: () => import('./company/dashboard-page/dashboard-page.module').then( m => m.DashboardPagePageModule)
+  },
+  {
+    path: 'farmers-result',
+    loadChildren: () => import('./company/farmer-page/farmer-page.module').then( m => m.FarmerPagePageModule)
+  },
+  {
+    path: 'farmer-details',
+    loadChildren: () => import('./company/farmer-details-page/farmer-details-page.module').then( m => m.FarmerDetailsPagePageModule)
+  },
 ];
 
 @NgModule({

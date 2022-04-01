@@ -18,13 +18,15 @@ export class HomePage implements OnInit {
   onLogin(){
     if(this.username){
       if(this.username.toLocaleLowerCase().trim() == "farmer")
-        this.navCtrl.navigateRoot(['/farmer-dashboard']); 
+        this.navCtrl.navigateRoot(['/farmer']); 
       if(this.username.toLocaleLowerCase().trim() == "capturer")
-        this.navCtrl.navigateRoot(['/capturer-dashboard']); 
+        this.navCtrl.navigateRoot(['/capturer']); 
       if(this.username.toLocaleLowerCase().trim() == "admin")
-        this.navCtrl.navigateRoot(['/admin-dashboard/approved-live-stock-page']);         
+        this.navCtrl.navigateRoot(['/admin/approved-live-stock-page']);         
       if(this.username.toLocaleLowerCase().trim() == "mmc")
-        this.navCtrl.navigateRoot(['/mmc-dashboard-page']);
+        this.navCtrl.navigateRoot(['/mmc']);
+      if(this.username.toLocaleLowerCase().trim() == "company")
+        this.navCtrl.navigateRoot(['/company']);
     }
       
   }
