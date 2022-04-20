@@ -1,0 +1,79 @@
+.header{
+    height: 70%;
+    background: #020024;
+    background: linear-gradient(195deg, #020024 0%, #0e4389 41%, #00d4ff 93%);
+    padding: 40px 25px 0px 25px;
+    font-family: sans-serif;
+}
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.curve {
+    position: absolute;
+    height: 250px;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+
+.curve::before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 103% 63%;
+    width: 100%;
+    height: 68%;
+    transform: translate(34%, 124%);
+    background: #fff;
+}
+
+.curve::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 214% 105%;
+    width: 80%;
+    background: linear-gradient(195deg, #020024 0, #0e4389 0%, #00d4ff 60%);
+    height: 73%;
+    transform: translate(-23%, 59%);
+    z-index: -1;
+}
+
+.white{
+    color: ghostwhite;
+    font-size: x-large;
+    font-family: sans-serif;
+}
+
+.gray{
+    color: slategray;
+}
+
+.title-col{
+    font-size: x-large;
+    padding-top: 25px;
+    color: #fff;
+}
+
+.card{
+    background-color: #fff;
+    border-radius: 15px;
+    text-align: center;  
+}
+
+.mergin-5{
+    margin: 5px;
+}
+
+.mergin-5t{
+    margin-top: 5px;
+}
+
+.mergin-5b{
+    margin-bottom: 5px;
+}

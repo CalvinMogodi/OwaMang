@@ -11,6 +11,8 @@ export class DashboardPage implements OnInit {
   public currentModal:any = null;
   public livestocks: any[] = [];
   public isAdded: boolean = false;
+  public date = new Date(Date.now());
+  public currentMonth =  this.date.toLocaleString('en-ZA', {month: 'long'}); // {month:'long'}
 
   constructor(private modalController: ModalController) { }
 

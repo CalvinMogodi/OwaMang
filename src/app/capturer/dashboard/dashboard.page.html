@@ -1,15 +1,89 @@
-<ion-header>
+<!--<ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title class="header">O wa Mang</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header>-->
 
 <ion-content>
+  <div class="header">
+    <p>
+      <span class="gray">What would you</span>
+      <br/>
+      <label class="white">Like ToDo?</label>
+    </p>
+
+   <ion-grid>
+     <ion-row>
+       <ion-col size="1"></ion-col>
+       <ion-col size="5" class="card mergin-5">
+        <div>
+          <img src="../../../assets/img/farmer-icon.jpg"/>         
+          <h6>  <ion-icon name="add-outline" style="font-size: larger;"></ion-icon> Add Farmer</h6> 
+        </div>
+       </ion-col>
+       <ion-col size="5" class="card mergin-5t mergin-5b">
+        <div>
+          <img src="../../../assets/img/farmer-icon.jpg"/>          
+          <h6> <ion-icon name="pencil-outline" style="font-size: larger;"></ion-icon> Edit Farmer</h6> 
+        </div>
+       </ion-col>
+     </ion-row>
+     <ion-row>
+      <ion-col size="1"></ion-col>
+       <ion-col size="5" class="card mergin-5">
+        <div>
+          <img src="../../../assets/img/home-cow.png"/>          
+          <h6> <ion-icon name="add-outline" style="font-size: larger;"></ion-icon>Add Livestock</h6> 
+        </div>
+       </ion-col>
+       <ion-col size="5" class="card mergin-5t mergin-5b">
+        <div>
+          <img src="../../../assets/img/home-cow.png"/>         
+          <h6>  <ion-icon name="pencil-outline" style="font-size: larger;"></ion-icon>Edit Livestock</h6> 
+        </div>
+       </ion-col>
+    </ion-row>
+   </ion-grid>
+    
+    <!--<ion-label class="white">{{currentMonth}}</ion-label>
+    <br /><br />
+    <ion-row>
+      <ion-col size="3">
+        <ion-avatar>
+          <img src="../../../assets/img/capturer-placeholder.png">
+        </ion-avatar>
+      </ion-col>
+      <ion-col size="9" class="title-col">
+        <ion-label>Item Avatar</ion-label>
+      </ion-col>
+    </ion-row>
+
+
+
+    <ion-searchbar (click)="showBrandmark(false)" style="background: transparent;" showCancelButton="focus" cancelButtonText="Custom Cancel"></ion-searchbar>
+    <ion-row>
+      <ion-col size="8" class="start title">
+        <ion-label>
+          <h2 class="title-header">My Customers</h2>
+          <p class="title-count">82</p>
+        </ion-label>
+      </ion-col>
+      <ion-col size="4" class="reserve-col">
+        <button class="reserve-btn" (click)="showBrandmark(true)">Reserve</button>
+      </ion-col>
+    </ion-row>-->
+  </div>
+
+  <section>
+    <!-- content here -->
+    <div class="curve"></div>
+  </section>
+  <!--
   <ion-fab vertical="top" horizontal="end" slot="fixed">
-    <ion-fab-button (click)="openAddLivestockModal()">
+    <ion-fab-button (click)="openAddLivestockModal()">  
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
@@ -111,5 +185,5 @@
         </ion-list>
       </ion-accordion>
     </ion-accordion-group>
-  </ion-list>
+  </ion-list>-->
 </ion-content>
