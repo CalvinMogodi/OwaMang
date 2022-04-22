@@ -81,3 +81,19 @@
     color: #fff;
     border: #5a7eb2 solid;
 }
+
+.item-native {
+    background: transparent !important;
+}
+
+.sc-ion-searchbar-md-h{
+    background: unset;
+}
+
+.white{
+    color: #fff;
+}
+
+ion-item > div{
+    background: transparent !important;
+}

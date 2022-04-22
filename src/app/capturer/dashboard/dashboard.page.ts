@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { ModalController, NavController } from '@ionic/angular';
+import { BrandmarksPage } from 'src/app/brandmarks/brandmarks.page';
+import { FarmerSearchPage } from 'src/app/farmer/search/search.page';
 import { AddLivestockPage } from '../add-livestock/add-livestock.page';
 
 @Component({
@@ -14,7 +16,7 @@ export class DashboardPage implements OnInit {
   public date = new Date(Date.now());
   public currentMonth =  this.date.toLocaleString('en-ZA', {month: 'long'}); // {month:'long'}
 
-  constructor(private modalController: ModalController) { }
+  constructor(private modalController: ModalController,public navCtrl: NavController) { }
 
   ngOnInit() {
   }
@@ -32,5 +34,43 @@ export class DashboardPage implements OnInit {
     if(data.data){
       this.isAdded = true;
     }
+  }
+
+  addFarmer(){
+    this.navCtrl.navigateRoot(['/register']);     
+  }
+
+  async editFarmer(){
+    const modal = await this.modalController.create({
+      component: FarmerSearchPage,
+      cssClass: 'my-custom-class',
+      swipeToClose: true,
+    });
+    await modal.present();  
+    
+    const { data } = await modal.onWillDismiss();
+    const farmer = data.farmer;
+    if(farmer){
+      this.navCtrl.navigateRoot(['/register']);
+    }
+  }
+
+  addLivestock(){
+    this.openAddLivestockModal();
+  }
+
+  async editLivestock(){     
+      const modal = await this.modalController.create({
+        component: BrandmarksPage,
+        cssClass: 'my-custom-class',
+        swipeToClose: true,
+      });
+      await modal.present();  
+      
+      const { data } = await modal.onWillDismiss();
+      const brandmark = data.brandmarks;
+      if(brandmark){
+        this.openAddLivestockModal();
+      }
   }
 }

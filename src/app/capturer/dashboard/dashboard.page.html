@@ -18,13 +18,13 @@
    <ion-grid>
      <ion-row>
        <ion-col size="1"></ion-col>
-       <ion-col size="5" class="card mergin-5">
+       <ion-col size="5" class="card mergin-5" (click)="addFarmer()"> 
         <div>
           <img src="../../../assets/img/farmer-icon.jpg"/>         
           <h6>  <ion-icon name="add-outline" style="font-size: larger;"></ion-icon> Add Farmer</h6> 
         </div>
        </ion-col>
-       <ion-col size="5" class="card mergin-5t mergin-5b">
+       <ion-col size="5" class="card mergin-5t mergin-5b"  (click)="editFarmer()">
         <div>
           <img src="../../../assets/img/farmer-icon.jpg"/>          
           <h6> <ion-icon name="pencil-outline" style="font-size: larger;"></ion-icon> Edit Farmer</h6> 
@@ -33,13 +33,13 @@
      </ion-row>
      <ion-row>
       <ion-col size="1"></ion-col>
-       <ion-col size="5" class="card mergin-5">
+       <ion-col size="5" class="card mergin-5" (click)="addLivestock()">
         <div>
           <img src="../../../assets/img/home-cow.png"/>          
           <h6> <ion-icon name="add-outline" style="font-size: larger;"></ion-icon>Add Livestock</h6> 
         </div>
        </ion-col>
-       <ion-col size="5" class="card mergin-5t mergin-5b">
+       <ion-col size="5" class="card mergin-5t mergin-5b" (click)="editLivestock()">
         <div>
           <img src="../../../assets/img/home-cow.png"/>         
           <h6>  <ion-icon name="pencil-outline" style="font-size: larger;"></ion-icon>Edit Livestock</h6> 

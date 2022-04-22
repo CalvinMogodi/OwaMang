@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Animation, AnimationController } from '@ionic/angular';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,10 +7,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.page.scss'],
 })
 export class DashboardPage implements OnInit {
+  @ViewChild('fadeText', { static: true }) fadeText:ElementRef;
+  
+  constructor(private animationCtrl: AnimationController) {
+   
+   }
 
-  constructor() { }
+  async ngOnInit() {
+    
+    const text = this.animationCtrl
+    .create()
+    .addElement(this.fadeText.nativeElement)
+    .duration(2000)
+    .easing('ease-out')
+    .fromTo('opacity', 0, 1)
+   .iterations(5)
+   .direction('alternate')
+   .fromTo('color', '#649173', 'var(--background)');
 
-  ngOnInit() {
+    await text.play();
+
   }
 
 }
