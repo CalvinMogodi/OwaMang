@@ -35,27 +35,9 @@
   }
 
   .header{
-    height:40%;
+    height:50%;
     text-align: center;
-    background: linear-gradient(195deg, rgba(2,0,36,1) 0%, rgba(14,67,137,1) 50%, rgba(0,212,255,1) 100%);
     padding: 25px;
-}
-
-.title-header{
-    color: #bddefc;
-    font-size: x-large;
-    font-family: sans-serif;
-}
-
-input{
-    color: #bddefc;
-    font-size: x-large;
-    font-family: sans-serif;
-}
-
-.sub-title{
-    color: #97b1c9;
-    font-size: large;
 }
 
 .cancel-search{
@@ -125,4 +107,5 @@ ion-item {
 .sub-title{
     text-align: center;
     padding: 19px;
+    color:#45644f !important;
 }

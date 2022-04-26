@@ -1,9 +1,7 @@
-.header{
-    height: 70%;
-    background: #020024;
-    background: linear-gradient(195deg, #020024 0%, #0e4389 41%, #00d4ff 93%);
-    padding: 40px 25px 0px 25px;
-    font-family: sans-serif;
+.body{
+    height: 90% !important;
+    max-height: 90% !important;
+    overflow: hidden;
 }
 
 section {
@@ -13,36 +11,6 @@ section {
     align-items: center;
 }
 
-.curve {
-    position: absolute;
-    height: 250px;
-    width: 100%;
-    bottom: 0;
-    text-align: center;
-}
-
-.curve::before {
-    content: "";
-    display: block;
-    position: absolute;
-    border-radius: 103% 63%;
-    width: 100%;
-    height: 68%;
-    transform: translate(34%, 124%);
-    background: #fff;
-}
-
-.curve::after {
-    content: "";
-    display: block;
-    position: absolute;
-    border-radius: 214% 105%;
-    width: 80%;
-    background: linear-gradient(195deg, #020024 0, #0e4389 0%, #00d4ff 60%);
-    height: 73%;
-    transform: translate(-23%, 59%);
-    z-index: -1;
-}
 
 .white{
     color: ghostwhite;
@@ -61,14 +29,18 @@ section {
 }
 
 .card{
-    background-color: #fff;
     border-radius: 15px;
     text-align: center;  
     z-index: 9;
+    border: #649173 2px solid;
+    background: whitesmoke;
 }
 
 .mergin-5{
-    margin: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px !important;
+    margin-right: 5px !important;
 }
 
 .mergin-5t{
@@ -77,4 +49,13 @@ section {
 
 .mergin-5b{
     margin-bottom: 5px;
+}
+
+.margin-30t{
+    margin-top: 15px;
+}
+
+.detail-header{
+    padding-left: 20px;
+    padding-top: 20px;
 }

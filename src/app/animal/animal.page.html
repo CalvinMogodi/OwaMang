@@ -5,7 +5,7 @@
         <ion-icon (click)="onBack()" name="arrow-back-outline" class="back-btn"></ion-icon>
       </ion-note>
       <ion-label>
-        <h2 class="title-header">Create new account</h2>
+        <h2 class="title-header">Livestock</h2>
       </ion-label>
       <ion-avatar slot="end" class="profile-pic">
         <img src="../../../assets/img/farmer-placeholder.png" />
@@ -108,31 +108,6 @@
         <ion-input required="true" type="email" class="border-b" [(ngModel)]="farmer.email"></ion-input>
       </ion-item>
 
-      <!--
-      <ion-item (click)="showBrandmark()">
-        <ion-label position="stacked">Brandmark</ion-label>
-        <ion-grid style="width: 100%;">
-              <ion-row>
-                <ion-col size="1" *ngFor="let brandmark of brandmarks">
-                  <div style="padding: 5px 0px 0px 5px;" [ngClass]="brandmark.class" [innerHTML]="brandmark.element"></div>
-                </ion-col>
-              </ion-row>   
-        </ion-grid>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">New Password</ion-label>
-        <ion-input required="true" type="password" size="password" autocomplete="new-password"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Confirm Password</ion-label>
-        <ion-input required="true" type="password" size="password" autocomplete="new-password"></ion-input>
-      </ion-item>
-  
-      <p class="text" ng-style="{'color':'msgColor'}">
-        {{firstMsg}} <ion-router-link href="home" (click)="goToHome()" class="underline" [hidden]="!showLink">click here</ion-router-link> {{secondMsg}}
-      </p>
-      <br>
-        <ion-button expand="block" (click)="onSubmit()">Submit</ion-button>  -->
     </div>
   </div>
 

@@ -1,15 +1,16 @@
-<ion-content padding>
+<ion-content padding fullscreen [scrollEvents]="false">
   <div class="header">
     <ion-row>
-      <ion-col size="1">
+      <ion-col size="2" class="start">
         <ion-icon (click)="onBack()" name="arrow-back-outline" class="cancel-search pt-15"></ion-icon>
       </ion-col>
-      <ion-col size="9">
+      <ion-col size="8">
         <ion-label>
           <h2 class="title-header">Farmer Search </h2>
           <p class="sub-title">Use one of the field to search for farmer.</p>
         </ion-label>
       </ion-col>
+
     </ion-row>
    
     <br />
@@ -25,23 +26,41 @@
     <span>Farmers</span>  
   </div>
   <div class="body">
-    <div class="noData" *ngIf="noData">
+   <!--
+      <div class="noData" *ngIf="noData">
       <p> No Records Found!</p>     
     </div>
-    <ion-list *ngIf="!noData">
-     
 
-      <ion-item *ngFor="let farmer of farmers" (click)="selectUser(farmer)">
-        <ion-avatar slot="start">
-          <img src="{{farmer.icon}}" />
-        </ion-avatar>
-        <ion-label>
-          <h2>{{farmer.name}}</h2>
-          <h3>{{farmer.idNo}}</h3>
-          <p>{{farmer.address}}</p>
-        </ion-label>
-      </ion-item>
-    </ion-list>
+        <ion-item *ngFor="let farmer of farmers" (click)="selectUser(farmer)">
+
+
+   -->
+    <div >
+      <ion-list> 
+        <ion-item (click)="selectUser(null)" class="border-b">
+          <ion-avatar slot="start">
+            <img src="../../../assets/img/farmer-placeholder1.png" />
+          </ion-avatar>
+          <ion-label>
+            <h2>Luke Jackson</h2>
+            <h3>555252487912</h3>
+            <p>Listen, I have had a pretty messed up day...</p>
+          </ion-label>
+        </ion-item>
+
+        <ion-item (click)="selectUser(null)" class="border-b">
+          <ion-avatar slot="start">
+            <img src="../../../assets/img/farmer-placeholder.png" />
+          </ion-avatar>
+          <ion-label>
+            <h2>Han Joe</h2>
+            <h3>723456487912</h3>
+            <p>Listen, I have had a pretty messed up day...</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+    
   </div>
 
 </ion-content>

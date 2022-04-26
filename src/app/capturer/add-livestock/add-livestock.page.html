@@ -1,173 +1,308 @@
-<ion-header translucent class="model-toolbar-background">
-  <div>
-    <ion-toolbar class="model-toolbar-background" style="background-color: transparent;">
-      <ion-title>Capturer Livestock</ion-title>     
-    </ion-toolbar>
-  </div>
-</ion-header>
-
-<ion-content class="padding">
-  <p class="padding-18">Capture livestock details and attach all the required documents</p>
-
-  <ion-grid>
-    <ion-row>
-      <ion-col size="6">
-        <ion-item class="rounded-item">
-          <ion-label position="stacked">Owner Name</ion-label>
-          <ion-input required="true"></ion-input>
-        </ion-item>
-      </ion-col>
-      <ion-col size="6">
-        <ion-item class="rounded-item">
-          <ion-label position="stacked">Owner Surname</ion-label>
-          <ion-input required="true"></ion-input>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-  <ion-grid>
-    <ion-row>
-      <ion-col size="5">
-        <hr class="line" style="float: right;" />
-      </ion-col>
-      <ion-col size="2" style="text-align: center;">
-        Or
-      </ion-col>
-      <ion-col size="5">
-        <hr class="line" style="float: left;" />
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-
-  <ion-grid>
-    <ion-row>
-      <ion-col size="6">
-        <ion-item class="rounded-item">
-          <ion-label position="stacked">Company Name</ion-label>
-          <ion-input required="true"></ion-input>
-        </ion-item>
-      </ion-col>
-      <ion-col size="6">
-        <ion-item class="rounded-item">
-          <ion-label position="stacked">Registeration No.</ion-label>
-          <ion-input required="true"></ion-input>
-        </ion-item>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-
-  <div class="divider">
-    Details
-  </div>
-<div class="padding-r20">
-  <ion-item (click)="showBrandmark()">
-    <ion-label position="stacked">Breanmark</ion-label>
-    <ion-grid style="width: 100%;">
-      <ion-row>
-        <ion-col size="1" *ngFor="let brandmark of brandmarks">
-          <div style="padding: 5px 0px 0px 5px;" [ngClass]="brandmark.class" [innerHTML]="brandmark.element"></div>
+<ion-content padding [scrollEvents]="false" style="background-color: #fff;" fullscreen>
+  <div class="header">
+    <ion-item color="transparent" lines="none">
+      <ion-note slot="start">
+        <ion-icon (click)="onBack()" name="arrow-back-outline" class="back-btn"></ion-icon>
+      </ion-note>
+      <ion-label>
+        <h2 class="title-header">Livestock</h2>
+      </ion-label>
+      <ion-avatar slot="end" class="profile-pic">
+        <img src="../../../assets/img/farmer-placeholder.png" />
+      </ion-avatar>
+    </ion-item>
+    <div class="padding-25">
+      <p class="eWallet-title">
+        The Beach Hotel, Marine Drive, Summerstrand, Gqeberha, South Africa
+      </p>
+      <ion-row class="eWallet-title">
+        <ion-col size="6">
+          011 256 3652
         </ion-col>
-      </ion-row>   
-</ion-grid>
-  </ion-item>
+        <ion-col size="6">
+          test@test.com
+        </ion-col>
+      </ion-row>
+      <h1 class="title-header">87548523325552</h1>
+      <ion-row>
+        <ion-col size="6">
+          Matome Moloi
+        </ion-col>
+        <ion-col size="6">
+          15/Apr/2022
+        </ion-col>
+      </ion-row>
+    </div>
+    <br/>
+  </div>
 
-  <ion-item style="margin-top: 20px;  margin-bottom: 8px;">
-    <ion-label>Bread Type</ion-label>
-    <ion-select>
-      <ion-select-option value="01">Afrikaner</ion-select-option>
-      <ion-select-option value="02">Angus</ion-select-option>
-      <ion-select-option value="03">Ankole</ion-select-option>
-      <ion-select-option value="04">Beefmaster</ion-select-option>
-      <ion-select-option value="05">Bonsmara</ion-select-option>
-      <ion-select-option value="06">Boran</ion-select-option>
-      <ion-select-option value="08">Brahman</ion-select-option>
-      <ion-select-option value="07">Braunvieh</ion-select-option>
-      <ion-select-option value="07">Charolais</ion-select-option>
-      <ion-select-option value="07">Drakensberger</ion-select-option>
-      <ion-select-option value="07">Hereford</ion-select-option>
-      <ion-select-option value="07">Limousin</ion-select-option>
-      <ion-select-option value="07">Nguni</ion-select-option>
-      <ion-select-option value="07">Santa Gertrudis</ion-select-option>
-      <ion-select-option value="07">Shorthorn</ion-select-option>
-      <ion-select-option value="07">Simbra</ion-select-option>
-      <ion-select-option value="07">Simmentaler</ion-select-option>
-      <ion-select-option value="07">Sussex</ion-select-option>
-      <ion-select-option value="07">Tuli</ion-select-option>
-      <ion-select-option value="07">Wagyu</ion-select-option>
+  <div class="background">
+    <p class="title">Matome Moloi Herd</p>
+    <div>
+      <ion-list>
+        <ion-item-sliding (click)="addEditAnimal(false)" color="transparent" class="border-b" lines="none">
+          <ion-item-options side="start">
+            <ion-item-option color="tertiary" *ngIf="status1=='Alive'" (click)="onStatusConfirm('Lost', 1)">Lost</ion-item-option>
+            <ion-item-option color="tertiary" *ngIf="status1=='Lost'" (click)="onStatusConfirm('Alive', 1)">Found</ion-item-option>
+            <ion-item-option color="danger" (click)="onStatusConfirm('Dead', 1)">Dead</ion-item-option>
+          </ion-item-options>
+      
+          <ion-item>
+            <ion-avatar slot="start" class="brandmark red-cattle">
+              <p class="brandmark-p">&#67; &#69; &#8710; <br />
+                001
+              <p>
+            </ion-avatar>
+            <ion-label>
+              <h3>Male, Status: {{status1}}</h3>
+              <p class="font-small">02 September 2000</p>
+            </ion-label>
+            <ion-note slot="end">
+              <ion-label>
+                <h3>
+                  <strong>R18 569.32</strong>
+                </h3>
+                <p>
+                  <span>Brahman</span>
+                </p>
+              </ion-label>
+            </ion-note>
+          </ion-item>
+      
+          <ion-item-options side="end">
+            <ion-item-option color="primary" (click)="onStatusConfirm('Sold', 1)">Sold</ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding>
+      
+        <ion-item color="transparent" class="border-b" lines="none">
+          <ion-avatar slot="start" class="brandmark black-cattle">
+            <p class="brandmark-p">&#67; &#69; &#8710; <br />
+              002
+            <p>
+          </ion-avatar>
+          <ion-label>
+            <h3>Female, Status: Lost</h3>
+            <p class="font-small">02 September 2010</p>
+          </ion-label>
+          <ion-note slot="end">
+            <ion-label>
+              <h3>
+                <strong>R21 569.32</strong>
+              </h3>
+              <p>
+                <span>Brahman</span>
+              </p>
+            </ion-label>
+          </ion-note>
+        </ion-item>
+        <ion-item color="transparent" class="border-b" lines="none">
+          <ion-avatar slot="start" class="brandmark red-cattle">
+            <p class="brandmark-p">&#67; &#69; &#8710; <br />
+              003
+            <p>
+          </ion-avatar>
+          <ion-label>
+            <h3>Male, Status: Alive</h3>
+            <p class="font-small">02 September 2000</p>
+          </ion-label>
+          <ion-note slot="end">
+            <ion-label>
+              <h3>
+                <strong>R18 569.32</strong>
+              </h3>
+              <p>
+                <span>Brahman</span>
+              </p>
+            </ion-label>
+          </ion-note>
+        </ion-item>
+        <ion-item color="transparent" class="border-b" lines="none">
+          <ion-avatar slot="start" class="brandmark red-cattle">
+            <p class="brandmark-p">&#67; &#69; &#8710; <br />
+              004
+            <p>
+          </ion-avatar>
+          <ion-label>
+            <h3>Male, Status: Alive</h3>
+            <p class="font-small">02 September 2000</p>
+          </ion-label>
+          <ion-note slot="end">
+            <ion-label>
+              <h3>
+                <strong>R18 569.32</strong>
+              </h3>
+              <p>
+                <span>Brahman</span>
+              </p>
+            </ion-label>
+          </ion-note>
+        </ion-item>
+      </ion-list>
+    </div>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="addEditAnimal(true)">
+      <ion-fab-button>
+        <ion-icon name="add"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+<!--
+    <p class="padding-18">Capture livestock details and attach all the required documents</p>
 
-    </ion-select>
-  </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-item class="rounded-item">
+            <ion-label position="stacked">Owner Name</ion-label>
+            <ion-input required="true"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="6">
+          <ion-item class="rounded-item">
+            <ion-label position="stacked">Owner Surname</ion-label>
+            <ion-input required="true"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="5">
+          <hr class="line" style="float: right;" />
+        </ion-col>
+        <ion-col size="2" style="text-align: center;">
+          Or
+        </ion-col>
+        <ion-col size="5">
+          <hr class="line" style="float: left;" />
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
-  <ion-item style="margin-top: 20px;  margin-bottom: 8px;">
-    <ion-label>Color</ion-label>
-    <ion-select value="04">
-      <ion-select-option value="01">white</ion-select-option>
-      <ion-select-option value="02">Red</ion-select-option>
-      <ion-select-option value="03">Black</ion-select-option>
-    </ion-select>
-  </ion-item>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <ion-item class="rounded-item">
+            <ion-label position="stacked">Company Name</ion-label>
+            <ion-input required="true"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size="6">
+          <ion-item class="rounded-item">
+            <ion-label position="stacked">Registeration No.</ion-label>
+            <ion-input required="true"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
-  <ion-row style="padding: 0px 20px; margin-top: 25px;">
-    <ion-col style="border-bottom: 1px lightgray solid !important;">Date:</ion-col>
-    <ion-col style="border-bottom: 1px lightgray solid !important;" id="open-date-input" class="ion-text-end">
-      <ion-text>{{ date|date}}</ion-text>
-    </ion-col>
-    <ion-popover trigger="open-date-input" show-backdrop="false">
-      <ng-template>
-        <ion-datetime
-           #popoverDate
-           value="{{startdate}}"
-           presentation="date"
-           showDefaultButtons=true
-           (ionChange)="dateValue = setDateofbirth(popoverDate.value)"
-         ></ion-datetime>
-      </ng-template>
-    </ion-popover>          
- </ion-row>
- <ion-item>
-  <ion-label position="floating">Owner's Address</ion-label>
-  <ion-input required="true" (click)="showAddressModal()" [(ngModel)]="address.place"type="text" placeholder="Pick an address"></ion-input>
-</ion-item>
+    <div class="divider">
+      Details
+    </div>
+    <div class="padding-r20">
+      <ion-item (click)="showBrandmark()">
+        <ion-label position="stacked">Breanmark</ion-label>
+        <ion-grid style="width: 100%;">
+          <ion-row>
+            <ion-col size="1" *ngFor="let brandmark of brandmarks">
+              <div style="padding: 5px 0px 0px 5px;" [ngClass]="brandmark.class" [innerHTML]="brandmark.element"></div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
 
-<ion-item>
-  <ion-label position="stacked">Notes</ion-label>
-  <ion-textarea rows="3" cols="20" placeholder="Enter any notes here..."></ion-textarea>
-</ion-item>
-</div>
+      <ion-item style="margin-top: 20px;  margin-bottom: 8px;">
+        <ion-label>Bread Type</ion-label>
+        <ion-select>
+          <ion-select-option value="01">Afrikaner</ion-select-option>
+          <ion-select-option value="02">Angus</ion-select-option>
+          <ion-select-option value="03">Ankole</ion-select-option>
+          <ion-select-option value="04">Beefmaster</ion-select-option>
+          <ion-select-option value="05">Bonsmara</ion-select-option>
+          <ion-select-option value="06">Boran</ion-select-option>
+          <ion-select-option value="08">Brahman</ion-select-option>
+          <ion-select-option value="07">Braunvieh</ion-select-option>
+          <ion-select-option value="07">Charolais</ion-select-option>
+          <ion-select-option value="07">Drakensberger</ion-select-option>
+          <ion-select-option value="07">Hereford</ion-select-option>
+          <ion-select-option value="07">Limousin</ion-select-option>
+          <ion-select-option value="07">Nguni</ion-select-option>
+          <ion-select-option value="07">Santa Gertrudis</ion-select-option>
+          <ion-select-option value="07">Shorthorn</ion-select-option>
+          <ion-select-option value="07">Simbra</ion-select-option>
+          <ion-select-option value="07">Simmentaler</ion-select-option>
+          <ion-select-option value="07">Sussex</ion-select-option>
+          <ion-select-option value="07">Tuli</ion-select-option>
+          <ion-select-option value="07">Wagyu</ion-select-option>
 
-<br/>
-<div class="divider">
-  Documents
-</div>
-<br/>
-<ion-item>
-  <ion-slides>
-    <ion-slide *ngFor="let upload of uploads; let i = index">
-      <div class="slide">
-        <div style="width: 100%; text-align: center;">
-          <input type="file" style="padding: 12px 0px 10px 105px;" (change)="onFileChange($event, upload)"/>
-          <br/>
-        </div>      
-        <div [ngStyle]="{'background-image': 'url(' + upload.imgUrl + ')'}" class="img-fit">
-        </div>
-        <h2>{{upload.title}}</h2>
-        <p style="font-size: small;color: gray;">
-          {{upload.description}}
-        </p>
-      </div>
-    </ion-slide>
-  </ion-slides>
-</ion-item>
+        </ion-select>
+      </ion-item>
 
-<ion-grid>
-  <ion-row>
-    <ion-col style="background-color: #92949c; text-align: center;" (click)="onCancel()">
-      <ion-button size="medium" color="medium">Cancel</ion-button>
-    </ion-col>
-    <ion-col style="background-color: #2dd36f; text-align: center" (click)="onSubmit()">
-      <ion-button size="medium" color="success">Submit</ion-button>
-    </ion-col>
-  </ion-row>
-</ion-grid>
+      <ion-item style="margin-top: 20px;  margin-bottom: 8px;">
+        <ion-label>Color</ion-label>
+        <ion-select value="04">
+          <ion-select-option value="01">white</ion-select-option>
+          <ion-select-option value="02">Red</ion-select-option>
+          <ion-select-option value="03">Black</ion-select-option>
+        </ion-select>
+      </ion-item>
 
+      <ion-row style="padding: 0px 20px; margin-top: 25px;">
+        <ion-col style="border-bottom: 1px lightgray solid !important;">Date:</ion-col>
+        <ion-col style="border-bottom: 1px lightgray solid !important;" id="open-date-input" class="ion-text-end">
+          <ion-text>{{ date|date}}</ion-text>
+        </ion-col>
+        <ion-popover trigger="open-date-input" show-backdrop="false">
+          <ng-template>
+            <ion-datetime #popoverDate value="{{startdate}}" presentation="date" showDefaultButtons=true
+              (ionChange)="dateValue = setDateofbirth(popoverDate.value)"></ion-datetime>
+          </ng-template>
+        </ion-popover>
+      </ion-row>
+      <ion-item>
+        <ion-label position="floating">Owner's Address</ion-label>
+        <ion-input required="true" (click)="showAddressModal()" [(ngModel)]="address.place" type="text"
+          placeholder="Pick an address"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Notes</ion-label>
+        <ion-textarea rows="3" cols="20" placeholder="Enter any notes here..."></ion-textarea>
+      </ion-item>
+    </div>
+
+    <br />
+    <div class="divider">
+      Documents
+    </div>
+    <br />
+    <ion-item>
+      <ion-slides>
+        <ion-slide *ngFor="let upload of uploads; let i = index">
+          <div class="slide">
+            <div style="width: 100%; text-align: center;">
+              <input type="file" style="padding: 12px 0px 10px 105px;" (change)="onFileChange($event, upload)" />
+              <br />
+            </div>
+            <div [ngStyle]="{'background-image': 'url(' + upload.imgUrl + ')'}" class="img-fit">
+            </div>
+            <h2>{{upload.title}}</h2>
+            <p style="font-size: small;color: gray;">
+              {{upload.description}}
+            </p>
+          </div>
+        </ion-slide>
+      </ion-slides>
+    </ion-item>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col style="background-color: #92949c; text-align: center;" (click)="onCancel()">
+          <ion-button size="medium" color="medium">Cancel</ion-button>
+        </ion-col>
+        <ion-col style="background-color: #2dd36f; text-align: center" (click)="onSubmit()">
+          <ion-button size="medium" color="success">Submit</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  -->
+  </div>
 </ion-content>

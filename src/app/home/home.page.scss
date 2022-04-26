@@ -1,12 +1,13 @@
 .login-background{
-    background-color: white;
-    position: absolute;
-    top: 40%;
-    height: 100%;
-    width: 100%;
-    border-radius: 15px 15px 0px 0px;
-    text-align: center;
-    padding: 25px;
+  background-color: white;
+  position: absolute;
+  top: 40%;
+  height: 50%;
+  max-height: 50% !important;
+  width: 100%;
+  border-radius: 15px 15px 0px 0px;
+  text-align: center;
+  padding: 25px;
 }
 
 .title{
@@ -48,3 +49,5 @@
     border-bottom: gray solid 1px;
     width: 88px;
   }
+
+  

@@ -21,9 +21,9 @@ export class DashboardPage implements OnInit {
     .duration(2000)
     .easing('ease-out')
     .fromTo('opacity', 0, 1)
-   .iterations(5)
+   .iterations(3)
    .direction('alternate')
-   .fromTo('color', '#649173', 'var(--background)');
+   .fromTo('color', '#649173', '#45644f');
 
     await text.play();
 

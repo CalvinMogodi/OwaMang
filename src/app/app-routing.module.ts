@@ -112,6 +112,14 @@ const routes: Routes = [
     path: 'farmer-details',
     loadChildren: () => import('./company/farmer-details-page/farmer-details-page.module').then( m => m.FarmerDetailsPagePageModule)
   },
+  {
+    path: 'menu',
+    loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
+  },
+  {
+    path: 'animal',
+    loadChildren: () => import('./animal/animal.module').then( m => m.AnimalPageModule)
+  },
 ];
 
 @NgModule({

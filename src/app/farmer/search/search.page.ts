@@ -49,23 +49,23 @@ export class FarmerSearchPage implements OnInit {
   }
 
   loadFarmers(){
-    this.farmers.push({name: 'Finn Smith', idNo:'623456487912', address: 'Listen, I have had a pretty messed up day...', icon: '../../../assets/img/farmer-placeholder1.png'});
-    this.farmers.push({name: 'Han Joe', idNo:'723456487912', address: 'Listen, I have had a pretty messed up day...', icon: '../../../assets/img/farmer-placeholder1.png'});
-    this.farmers.push({name: 'Rey Rey', idNo:'823456487912', address: 'Listen, I have had a pretty messed up day...', icon: '../../../assets/img/farmer-placeholder1.png'});
-    this.farmers.push({name: 'Luke Jackson', idNo:'955252487912', address: 'Listen, I have had a pretty messed up day...', icon: '../../../assets/img/farmer-placeholder1.png'});
-    this.farmers.push({name: 'Matome Moloi', idNo:'78456487912', address: 'Listen, I have had a pretty messed up day...', icon: '../../../assets/img/farmer-placeholder1.png'});
-    this.farmers.push({name: 'Jr.Luke Jackson', idNo:'955252487912', address: 'Listen, I have had a pretty messed up day...', icon: '../../../assets/img/farmer-placeholder1.png'});
-    this.farmers.push({name: 'Han Joe', idNo:'723456487912', address: 'Listen, I have had a pretty messed up day...', icon: '../../../assets/img/farmer-placeholder1.png'});
-    this.farmers.push({name: 'Rey Rey', idNo:'923456487912', address: 'Listen, I have had a pretty messed up day...', icon: '../../../assets/img/farmer-placeholder1.png'});
-    this.farmers.push({name: 'Luke Jackson', idNo:'555252487912', address: 'Listen, I have had a pretty messed up day...', icon: '../../../assets/img/farmer-placeholder1.png'});
-    this.farmers.push({name: 'Matome Moloi', idNo:'78456487912', address: 'Listen, I have had a pretty messed up day...', icon: '../../../assets/img/farmer-placeholder1.png'});
-    this.farmers.push({name: 'Jr.Luke Jackson', idNo:'975525248791', address: 'Listen, I have had a pretty messed up day...', icon: '../../../assets/img/farmer-placeholder1.png'});
+    this.farmers.push({name: 'Finn', surname:"Smith", idNo:'623456487912', contactNo1:'011 254 2145', contactNo2:'011 236 5354', address: 'Listen, I have had a pretty messed up day...', icon: '../../../assets/img/farmer-placeholder1.png'});
+    this.farmers.push({name: 'Han', surname:"Joe", idNo:'723456487912', contactNo1:'011 254 2145', contactNo2:'011 236 5354', address: 'Listen, I have had a pretty messed up day...', icon: '../../../assets/img/farmer-placeholder1.png'});
+    this.farmers.push({name: 'Rey', surname:"Rey", idNo:'823456487912', contactNo1:'011 254 2145', contactNo2:'011 236 5354', address: 'Listen, I have had a pretty messed up day...', icon: '../../../assets/img/farmer-placeholder1.png'});
+    this.farmers.push({name: 'Luke', surname:"Jackson", idNo:'955252487912', contactNo1:'011 254 2145', contactNo2:'011 236 5354', address: 'Listen, I have had a pretty messed up day...', icon: '../../../assets/img/farmer-placeholder1.png'});
+    this.farmers.push({name: 'Matome', surname:"Moloi", idNo:'78456487912', contactNo1:'011 254 2145', contactNo2:'011 236 5354', address: 'Listen, I have had a pretty messed up day...', icon: '../../../assets/img/farmer-placeholder1.png'});
+    this.farmers.push({name: 'Jr.Luke', surname:"Jackson", idNo:'955252487912', contactNo1:'011 254 2145', contactNo2:'011 236 5354', address: 'Listen, I have had a pretty messed up day...', icon: '../../../assets/img/farmer-placeholder1.png'});
+    this.farmers.push({name: 'Han', surname:"Joe", idNo:'723456487912', contactNo1:'011 254 2145', contactNo2:'011 236 5354', address: 'Listen, I have had a pretty messed up day...', icon: '../../../assets/img/farmer-placeholder1.png'});
+    this.farmers.push({name: 'Rey', surname:"Rey", idNo:'923456487912', contactNo1:'011 254 2145', contactNo2:'011 236 5354', address: 'Listen, I have had a pretty messed up day...', icon: '../../../assets/img/farmer-placeholder1.png'});
+    this.farmers.push({name: 'Luke', surname:"Jackson", idNo:'555252487912', contactNo1:'011 254 2145', contactNo2:'011 236 5354', address: 'Listen, I have had a pretty messed up day...', icon: '../../../assets/img/farmer-placeholder1.png'});
+    this.farmers.push({name: 'Matome', surname:"Moloi", idNo:'78456487912', contactNo1:'011 254 2145', contactNo2:'011 236 5354', address: 'Listen, I have had a pretty messed up day...', icon: '../../../assets/img/farmer-placeholder1.png'});
+    this.farmers.push({name: 'Jr.Luke', surname:"Jackson", idNo:'975525248791', contactNo1:'011 254 2145', contactNo2:'011 236 5354', address: 'Listen, I have had a pretty messed up day...', icon: '../../../assets/img/farmer-placeholder1.png'});
   }
 
   selectUser(farmer:any){
     this.modalController.dismiss({
       isCancel: false,
-      farmer: farmer
+      farmer: this.farmers[2]
     });
   }
 

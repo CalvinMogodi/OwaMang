@@ -36,3 +36,50 @@
     background-repeat: no-repeat;
     background-size: 100% 100%;
   }
+
+  .title{
+    margin: unset;
+  }
+
+  .background{
+    background-color: white;
+    position: absolute;
+    top: 40%;
+    height: 60%;
+    overflow-y: auto;
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+    text-align: center;
+    padding: 15px;
+}
+
+.header{
+  height: 45%;
+}
+
+.back-btn{
+  font-size: x-large;
+}
+
+.white-cattle{
+  background-color: #e9dac8;
+}
+.red-cattle{
+  background-color: #784a42;
+}
+.black-cattle{
+  background-color:  #2e2c2d;
+}
+
+.brandmark{
+  padding: 0.5px;
+  border: #649173 2px solid;
+}
+
+.brandmark-p{
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 5px;
+  color: #fff;
+}

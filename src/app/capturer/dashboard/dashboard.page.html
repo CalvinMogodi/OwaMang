@@ -1,33 +1,43 @@
-<!--<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
-    <ion-title class="header">O wa Mang</ion-title>
-  </ion-toolbar>
-</ion-header>-->
-
-<ion-content>
+<ion-content style="background-color: #fff;">
   <div class="header">
-    <p>
-      <span class="gray">What would you</span>
-      <br/>
-      <label class="white">Like ToDo?</label>
-    </p>
+    <ion-item color="transparent" lines="none">
+      <ion-note slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-note>
+      <ion-label>
+        <h2 class="title-header">Matome Moloi</h2>
+      </ion-label>
+      <ion-avatar slot="end" class="profile-pic">
+        <img src="../../../assets/img/farmer-placeholder.png" />
+      </ion-avatar>
+    </ion-item>
+  </div>
+  <section>
+    <!-- content here -->
+    <div class="curve"></div>
+  </section>
 
-   <ion-grid>
+  <div class="body">
+    <div class="detail-header">
+      <ion-label>
+        <h4 class="eWallet-title">What would you</h4>
+        <p class="font-small">Like ToDo?</p>
+      </ion-label>
+    </div>
+
+   <ion-grid class="margin-30t">
      <ion-row>
        <ion-col size="1"></ion-col>
        <ion-col size="5" class="card mergin-5" (click)="addFarmer()"> 
         <div>
-          <img src="../../../assets/img/farmer-icon.jpg"/>         
-          <h6>  <ion-icon name="add-outline" style="font-size: larger;"></ion-icon> Add Farmer</h6> 
+          <img src="../../../assets/img/farmer-icon.png"/>         
+          <p class="font-normal"><ion-icon name="add-outline"></ion-icon> <span>Add Farmer</span> </p> 
         </div>
        </ion-col>
        <ion-col size="5" class="card mergin-5t mergin-5b"  (click)="editFarmer()">
         <div>
-          <img src="../../../assets/img/farmer-icon.jpg"/>          
-          <h6> <ion-icon name="pencil-outline" style="font-size: larger;"></ion-icon> Edit Farmer</h6> 
+          <img src="../../../assets/img/farmer-icon.png"/>          
+          <p class="font-normal"> <ion-icon name="pencil-outline"></ion-icon> Edit Farmer</p> 
         </div>
        </ion-col>
      </ion-row>
@@ -36,154 +46,17 @@
        <ion-col size="5" class="card mergin-5" (click)="addLivestock()">
         <div>
           <img src="../../../assets/img/home-cow.png"/>          
-          <h6> <ion-icon name="add-outline" style="font-size: larger;"></ion-icon>Add Livestock</h6> 
+          <p class="font-normal"> <ion-icon name="add-outline"></ion-icon>Add Livestock</p> 
         </div>
        </ion-col>
        <ion-col size="5" class="card mergin-5t mergin-5b" (click)="editLivestock()">
         <div>
           <img src="../../../assets/img/home-cow.png"/>         
-          <h6>  <ion-icon name="pencil-outline" style="font-size: larger;"></ion-icon>Edit Livestock</h6> 
+          <p class="font-normal">  <ion-icon name="pencil-outline"></ion-icon>Edit Livestock</p> 
         </div>
        </ion-col>
     </ion-row>
    </ion-grid>
     
-    <!--<ion-label class="white">{{currentMonth}}</ion-label>
-    <br /><br />
-    <ion-row>
-      <ion-col size="3">
-        <ion-avatar>
-          <img src="../../../assets/img/capturer-placeholder.png">
-        </ion-avatar>
-      </ion-col>
-      <ion-col size="9" class="title-col">
-        <ion-label>Item Avatar</ion-label>
-      </ion-col>
-    </ion-row>
-
-
-
-    <ion-searchbar (click)="showBrandmark(false)" style="background: transparent;" showCancelButton="focus" cancelButtonText="Custom Cancel"></ion-searchbar>
-    <ion-row>
-      <ion-col size="8" class="start title">
-        <ion-label>
-          <h2 class="title-header">My Customers</h2>
-          <p class="title-count">82</p>
-        </ion-label>
-      </ion-col>
-      <ion-col size="4" class="reserve-col">
-        <button class="reserve-btn" (click)="showBrandmark(true)">Reserve</button>
-      </ion-col>
-    </ion-row>-->
-  </div>
-
-  <section>
-    <!-- content here -->
-    <div class="curve"></div>
-  </section>
-  <!--
-  <ion-fab vertical="top" horizontal="end" slot="fixed">
-    <ion-fab-button (click)="openAddLivestockModal()">  
-      <ion-icon name="add"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
-
-  <ion-list inset="true">
-    <ion-list-header>
-      <ion-item style="width: 100%;">       
-        <ion-label>
-          <h1> My Livestock</h1>
-        </ion-label>
-      </ion-item>
-    </ion-list-header>
-    <ion-accordion-group>
-      <ion-accordion value="colors" toggle-icon="arrow-down-circle">
-        <ion-item slot="header">
-          <ion-list>
-            <ion-item lines="none">
-              <img slot="start" src="../../../assets/img/home-cow.png" height="90px" />
-              <ion-label>
-                <h2>AJS 129 09: <span>Brahman</span></h2>
-                <h3>Owner: <span>Owner Owner</span></h3>
-                <p>Age:<span>2 years</span> Color:<span>White</span></p>
-              </ion-label>
-            </ion-item>
-          </ion-list>
-        </ion-item>
-
-        <ion-list slot="content">
-          <ion-card class="details">
-            <ion-card-header>
-              <ion-card-subtitle>Brahman</ion-card-subtitle>
-              <ion-card-title>AJS 129 09</ion-card-title>
-            </ion-card-header>
-            <ion-card-content>
-              <ion-grid>
-                <ion-row>
-                  <ion-col size="6"><b>Owner: </b><span>Name Surname</span><br /></ion-col>
-                  <ion-col size="6"><b>Color: </b><span>White</span><br /></ion-col>
-                </ion-row>
-                <ion-row>
-                  <ion-col size="6"><b>Age: </b><span>2 years</span><br /></ion-col>
-                  <ion-col size="6"><b>Date of birth: </b><span>15 March 2022</span><br /></ion-col>
-                </ion-row>
-                <ion-row>
-                  <ion-col size="12"><b>Note:</b> <br />
-                    <p>More information here, more information here.More information here, more information here.More
-                      information here, more information here. </p>
-                  </ion-col>
-                </ion-row>
-              </ion-grid>
-            </ion-card-content>
-          </ion-card>
-        </ion-list>
-      </ion-accordion>
-
-      <ion-accordion value="shapes" toggle-icon="arrow-down-circle" *ngIf="isAdded">
-        <ion-item slot="header">
-          <ion-list>
-            <ion-item class="padding-5" lines="none">
-              <img slot="start" src="../../../assets/img/home-sheep.png" height="90px" />
-              <ion-label>
-                <h2>AJS 129 09: <span>Brahman</span></h2>
-                <h3>Owner: <span>Owner Owner</span></h3>
-                <p>Age:<span>2 years</span> Color:<span>White</span></p>
-              </ion-label>
-            </ion-item>
-          </ion-list>
-        </ion-item>
-
-        <ion-list slot="content">
-          <ion-card class="details">
-            <ion-card-header>
-              <ion-card-subtitle>Brahman</ion-card-subtitle>
-              <ion-card-title>AJS 129 09</ion-card-title>
-            </ion-card-header>
-            <ion-card-content>
-              <ion-grid>
-                <ion-row>
-                  <ion-col size="6"><b>Owner: </b><span>Name Surname</span><br /></ion-col>
-                  <ion-col size="6"><b>Color: </b><span>White</span><br /></ion-col>
-                </ion-row>
-                <ion-row>
-                  <ion-col size="6"><b>Age: </b><span>2 years</span><br /></ion-col>
-                  <ion-col size="6"><b>Date of birth: </b><span>15 March 2022</span><br /></ion-col>
-                </ion-row>
-                <ion-row>
-                  <ion-col size="6"><b>Age: </b><span>2 years</span><br /></ion-col>
-                  <ion-col size="6"><b>Date of birth: </b><span>15 March 2022</span><br /></ion-col>
-                </ion-row>
-                <ion-row>
-                  <ion-col size="12"><b>Note:</b> <br />
-                    <p>More information here, more information here.More information here, more information here.More
-                      information here, more information here. </p>
-                  </ion-col>
-                </ion-row>
-              </ion-grid>
-            </ion-card-content>
-          </ion-card>
-        </ion-list>
-      </ion-accordion>
-    </ion-accordion-group>
-  </ion-list>-->
+  </div> 
 </ion-content>

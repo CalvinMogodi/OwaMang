@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ActionSheetController, ModalController, NavController } from '@ionic/angular';
+import { ActionSheetController, AlertController, ModalController, NavController } from '@ionic/angular';
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@awesome-cordova-plugins/file-transfer/ngx';
 import { BrandmarksPage } from 'src/app/brandmarks/brandmarks.page';
 import { LocationAutocompletePage } from 'src/app/location-autocomplete/location-autocomplete.page';
+import { FarmerSearchPage } from 'src/app/farmer/search/search.page';
+import { AnimalPage } from 'src/app/animal/animal.page';
 
 
 @Component({
@@ -19,6 +21,10 @@ export class AddLivestockPage implements OnInit {
   public date: Date = new Date();
   public croppedImagePath = "";
   public isLoading = false;
+  public status1: string = "Alive";
+  public status3: string = "Alive";
+  public status2: string = "Alive";
+  public status4: string = "Alive";
   public brandmarks: any[] = [];
   public brandmarkCertificatePath: string = "../../../assets/img/empty.jfif";
   public uploads: any[] = [{ imgUrl: "../../../assets/img/empty.jfif", title: 'Brandmark certificate', description: 'Brandmark certificate description, Brandmark certificate description, Brandmark certificate description, Brandmark certificate description, Brandmark certificate description,' },
@@ -32,7 +38,7 @@ export class AddLivestockPage implements OnInit {
   };
   public isPopoverOpen: boolean = true;
   constructor(private modalController: ModalController, private navCtrl: NavController,
-    public actionSheetController: ActionSheetController,
+    public actionSheetController: ActionSheetController,public alertController: AlertController,
     private transfer: FileTransfer) {
     this.address = {
       place: ''
@@ -146,6 +152,88 @@ export class AddLivestockPage implements OnInit {
         upload.imgUrl = event.target.result;
       }
       reader.readAsDataURL(event.target.files[0]);
+    }
+  }
+
+  setStatus(name, index){
+    switch(index){
+      case 1: 
+        this.status1 = name
+        break;
+      case 2: 
+        this.status2 = name
+        break;
+      case 3: 
+        this.status3 = name
+        break;
+      case 4: 
+        this.status4 = name
+        break;
+    }
+  }
+
+  async onStatusConfirm(name, index) {
+    const alert = await this.alertController.create({
+      cssClass: 'my-custom-class',
+      header: 'Confirm',      
+      message: '<strong>Are you sure</strong> this animal is '+ name + '?',
+      buttons: [
+        {
+          text: 'No',
+          role: 'cancel',
+          cssClass: 'secondary',
+          id: 'cancel-button',
+          handler: () => {
+           
+          }
+        }, {
+          text: 'Yes',
+          id: 'confirm-button',
+          handler: () => {
+            this.setStatus(name, index);
+          }
+        }
+      ]
+    });
+
+    await alert.present();
+  }
+
+  async addEditAnimal(isAdd:boolean){
+    const modal = await this.modalController.create({
+      component: AnimalPage,
+      cssClass: 'my-custom-class',
+      swipeToClose: true,
+    });
+
+    await modal.present();  
+    
+    const { data } = await modal.onWillDismiss();
+    const farmer: any = data.farmer;
+    if(!farmer){
+     this.dismissModal();
+    }
+    else{
+      //this.fa
+    }
+  }
+
+  async onBack(){
+    const modal = await this.modalController.create({
+      component: FarmerSearchPage,
+      cssClass: 'my-custom-class',
+      swipeToClose: true,
+    });
+
+    await modal.present();  
+    
+    const { data } = await modal.onWillDismiss();
+    const farmer: any = data.farmer;
+    if(!farmer){
+     this.dismissModal();
+    }
+    else{
+      //this.fa
     }
   }
 }

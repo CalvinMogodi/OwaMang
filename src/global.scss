@@ -97,3 +97,119 @@
 ion-item > div{
     background: transparent !important;
 }
+
+#background-content{
+    background-color: #ffffff !important;
+}
+ion-label {
+    color: #45644f !important;
+    font-size: 12px !important;
+}   
+
+ion-input{
+    color: #000000 !important;
+    font-size: 12px !important;
+}
+
+.border-b{
+    border-bottom: gray solid 1px;
+  }
+
+.scroll-y {
+    background-color: #fff !important;
+}
+
+.font-normal{
+    font-size: 12px;
+}
+
+.transparent{
+    background: transparent;
+}
+.profile-pic{
+    border: #649173 2px solid;
+}
+
+.header{
+    height:10%;
+    text-align: center;
+    background: linear-gradient(195deg, #649173, #dbd5a4);
+    padding-top: 20px;
+}
+
+.title-header{
+    color: #45644f !important;
+    font-weight: 800 !important;
+    font-size: x-large !important;
+    font-family: sans-serif !important;
+}
+
+.center{
+    text-align: center;
+}
+
+.start{
+    text-align: start;
+}
+
+.padding-5{
+    padding: 5px;
+  }
+
+  .padding-25{
+    padding: 25px;
+  }
+
+.eWallet-title{
+    color: #45644f;
+    font-size: 12px !important;
+    font-weight: 800 !important;
+}
+
+.font-small{
+    font-size: 11px !important;
+    color: black !important;
+}
+
+.curve {
+    position: absolute;
+    height: 250px;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+
+.searchbar-input.sc-ion-searchbar-md {
+    color: unset !important;
+    border: unset !important;
+}
+
+.curve::before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 206% 40%;
+    width: 90%;
+    height: 67%;
+    transform: translate(37%, 127%);
+    background: #fff;
+    background-size: contain;
+    background-image: URL("../../../assets/img/Animation/cows.gif");
+}
+
+.curve::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 214% 105%;
+    width: 80%;
+    background: linear-gradient(195deg, #649173, #dbd5a4);
+    height: 73%;
+    background: linear-gradient(195deg, #649173 -25%, #dbd5a4 61%);
+    transform: translate(-13%, 91%);
+    z-index: -1;
+}
+
+.padding-20l{
+    padding-left: 20px;
+}

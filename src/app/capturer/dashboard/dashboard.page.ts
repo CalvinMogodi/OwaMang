@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController, NavController } from '@ionic/angular';
 import { BrandmarksPage } from 'src/app/brandmarks/brandmarks.page';
+import { ActivatedRoute } from '@angular/router';
 import { FarmerSearchPage } from 'src/app/farmer/search/search.page';
 import { AddLivestockPage } from '../add-livestock/add-livestock.page';
 
@@ -46,17 +47,32 @@ export class DashboardPage implements OnInit {
       cssClass: 'my-custom-class',
       swipeToClose: true,
     });
+
     await modal.present();  
     
     const { data } = await modal.onWillDismiss();
-    const farmer = data.farmer;
+    const farmer: any = data.farmer;
     if(farmer){
-      this.navCtrl.navigateRoot(['/register']);
+        //var queryParams: JSON.stringify(farmer);
+      this.navCtrl.navigateRoot(['/register',{ farmer: true}]);
     }
   }
 
-  addLivestock(){
-    this.openAddLivestockModal();
+  async addLivestock(){
+    const modal = await this.modalController.create({
+      component: FarmerSearchPage,
+      cssClass: 'my-custom-class',
+      swipeToClose: true,
+    });
+
+    await modal.present();  
+    
+    const { data } = await modal.onWillDismiss();
+    const farmer: any = data.farmer;
+    if(farmer){
+      this.openAddLivestockModal();
+    }
+    
   }
 
   async editLivestock(){     
@@ -72,5 +88,9 @@ export class DashboardPage implements OnInit {
       if(brandmark){
         this.openAddLivestockModal();
       }
+  }
+
+  async openMenu() {
+    //await menuController.open();
   }
 }

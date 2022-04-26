@@ -4,7 +4,7 @@ import { RouteReuseStrategy } from '@angular/router';
 import { Camera } from '@ionic-native/Camera/ngx';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { FileTransfer, FileUploadOptions, FileTransferObject } from '@awesome-cordova-plugins/file-transfer/ngx';
-import { File } from '@ionic-native/file';
+import { CommonModule } from '@angular/common';  
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SplashPage } from './splash/splash.page';
@@ -14,7 +14,7 @@ import { Chart } from 'chart.js';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, CommonModule],
   providers: [
     SplashPage,Camera,
     FileTransfer,
