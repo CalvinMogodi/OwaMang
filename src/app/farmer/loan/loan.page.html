@@ -1,0 +1,36 @@
+<ion-content>
+  <div class="header">
+    <ion-item color="transparent" lines="none" class="center">
+      <ion-label>
+        <h2 class="title-header">Need a loan?</h2>
+      </ion-label>
+      <ion-note slot="end">
+        <ion-icon (click)="onColse()" name="close" class="close-btn"></ion-icon>
+      </ion-note>
+    </ion-item>
+  </div>
+  <div class="body">
+    <div class="padding-10l">
+      <ion-row>
+        <ion-col size="6">
+          <ion-label>
+            <h4 class="eWallet-title">Current loan amount</h4>
+            <p class="font-small">R 5 264.24</p>
+          </ion-label>
+        </ion-col>
+        <ion-col size="6" class="end">
+          <ion-label class="total">
+            <h4 class="eWallet-title">You qualify for</h4>
+            <p class="font-small" style=" float: right;">R 125 264.24</p>
+          </ion-label> 
+        </ion-col>
+      </ion-row>     
+    </div>
+    <ion-item color="transparent">
+      <ion-label position="stacked">Amount</ion-label>
+      <ion-input inputmode="decimal" placeholder="0.00"></ion-input>
+    </ion-item>
+  </div>
+  <br />
+  <ion-button (click)="onSave()" color="primary" expand="block">Submit</ion-button>
+</ion-content>

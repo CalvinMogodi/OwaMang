@@ -1,0 +1,20 @@
+<ion-content>
+  <div class="header">
+    <ion-item color="transparent" lines="none" class="center">
+      <ion-label>
+        <h2 class="title-header">Report a lost cow</h2>
+      </ion-label>
+      <ion-note slot="end">
+        <ion-icon (click)="onColse()" name="close" class="close-btn"></ion-icon>
+      </ion-note>
+    </ion-item>
+  </div>
+  <div>
+    <ion-item color="transparent">
+      <ion-label position="stacked">Notes</ion-label>
+      <ion-textarea rows="6" cols="20" placeholder="Enter any notes here..."></ion-textarea>
+    </ion-item>
+  </div>
+  <br />
+  <ion-button (click)="onSave()" color="primary" expand="block">Save</ion-button>
+</ion-content>

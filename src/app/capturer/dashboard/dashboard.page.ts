@@ -4,6 +4,7 @@ import { BrandmarksPage } from 'src/app/brandmarks/brandmarks.page';
 import { ActivatedRoute } from '@angular/router';
 import { FarmerSearchPage } from 'src/app/farmer/search/search.page';
 import { AddLivestockPage } from '../add-livestock/add-livestock.page';
+import { AnimalPage } from 'src/app/animal/animal.page';
 
 @Component({
   selector: 'app-dashboard',
@@ -46,6 +47,9 @@ export class DashboardPage implements OnInit {
       component: FarmerSearchPage,
       cssClass: 'my-custom-class',
       swipeToClose: true,
+      componentProps: { 
+        isLivestock: false,
+      }
     });
 
     await modal.present();  
@@ -58,24 +62,43 @@ export class DashboardPage implements OnInit {
     }
   }
 
-  async addLivestock(){
+  async addEditLivestock(isAdd: boolean){
     const modal = await this.modalController.create({
       component: FarmerSearchPage,
       cssClass: 'my-custom-class',
       swipeToClose: true,
+      componentProps: { 
+        isLivestock: true,
+      }
     });
 
     await modal.present();  
     
     const { data } = await modal.onWillDismiss();
     const farmer: any = data.farmer;
-    if(farmer){
-      this.openAddLivestockModal();
+    if(data.isLivestock){
+      const modal = await this.modalController.create({
+        component: AnimalPage,
+        cssClass: 'my-custom-class',
+        swipeToClose: true,
+        componentProps: { 
+          isAdd: isAdd,
+        }
+      });  
+      await modal.present();  
+      
+      const { data } = await modal.onWillDismiss();
+      const farmer: any = data.farmer;      
+    }else{
+      this.navCtrl.navigateRoot(['/register',{ farmer: true}]);
+      //this.openAddLivestockModal();
     }
-    
   }
 
-  async editLivestock(){     
+  async editLivestock(){   
+    this.navCtrl.navigateRoot(['/animal',{ farmer: true}]);
+      
+    /*
       const modal = await this.modalController.create({
         component: BrandmarksPage,
         cssClass: 'my-custom-class',
@@ -87,7 +110,7 @@ export class DashboardPage implements OnInit {
       const brandmark = data.brandmarks;
       if(brandmark){
         this.openAddLivestockModal();
-      }
+      }*/
   }
 
   async openMenu() {

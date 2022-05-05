@@ -30,7 +30,7 @@ const routes: Routes = [
   },
   {
     path: 'register',
-    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+    loadChildren: () => import('./farmer/register/register.module').then( m => m.RegisterPageModule)
   },
   {
     path: 'farmer',
@@ -119,6 +119,30 @@ const routes: Routes = [
   {
     path: 'animal',
     loadChildren: () => import('./animal/animal.module').then( m => m.AnimalPageModule)
+  },
+  {
+    path: 'insurance',
+    loadChildren: () => import('./farmer/insurance/insurance.module').then( m => m.InsurancePageModule)
+  },
+  {
+    path: 'loan',
+    loadChildren: () => import('./farmer/loan/loan.module').then( m => m.LoanPageModule)
+  },
+  {
+    path: 'sell',
+    loadChildren: () => import('./farmer/sell/sell.module').then( m => m.SellPageModule)
+  },
+  {
+    path: 'visit',
+    loadChildren: () => import('./farmer/visit/visit.module').then( m => m.VisitPageModule)
+  },
+  {
+    path: 'lost',
+    loadChildren: () => import('./farmer/lost/lost.module').then( m => m.LostPageModule)
+  },
+  {
+    path: 'account-verification',
+    loadChildren: () => import('./account-verification/account-verification.module').then( m => m.AccountVerificationPageModule)
   },
 ];
 

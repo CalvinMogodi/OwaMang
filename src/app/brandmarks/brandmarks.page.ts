@@ -148,6 +148,16 @@ export class BrandmarksPage implements OnInit {
   {class: 'west', htmlCode: '&#x2141;', element: '<span class="west">&#x2141;</span>'},
   {class: 'north', htmlCode: '&#8317;', element: '<span class="north">&#8317;</span>'},
   {class: 'north', htmlCode: '&#8318;', element: '<span class="north">&#8318;</span>'},
+  {class: 'north', htmlCode: '0', element: '<span class="north">0</span>'},
+  {class: 'north', htmlCode: '1', element: '<span class="north">1</span>'},
+  {class: 'north', htmlCode: '2', element: '<span class="north">2</span>'},
+  {class: 'north', htmlCode: '3', element: '<span class="north">3</span>'},
+  {class: 'north', htmlCode: '4', element: '<span class="north">4</span>'},
+  {class: 'north', htmlCode: '5', element: '<span class="north">5</span>'},
+  {class: 'north', htmlCode: '6', element: '<span class="north">6</span>'},
+  {class: 'north', htmlCode: '7', element: '<span class="north">7</span>'},
+  {class: 'north', htmlCode: '8', element: '<span class="north">8</span>'},
+  {class: 'north', htmlCode: '9', element: '<span class="north">9</span>'},
   ]
   
   constructor(private modalController: ModalController) { }

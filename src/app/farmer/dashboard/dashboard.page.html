@@ -24,72 +24,88 @@
       </ion-label>
     </div>
     <div class="cattles">
-      <ion-list class="cattle-list">
+
+      <ion-list style="background-color: #fff !important" class="cattle-list">
         <!-- List Header Full Lines -->
         <ion-list-header lines="full">
           <ion-label><strong>My Livestock</strong></ion-label>
         </ion-list-header>
         <div class="scroll">
-          <ion-item color="transparent">
-            <ion-avatar slot="start" class="brandmark red-cattle">
-              <p class="brandmark-p">&#67; &#69; &#8710; <br />
-                007
-              <p>
-            </ion-avatar>
-            <ion-label>
-              Male, Status: Alive
-            </ion-label>
-            <ion-note slot="end">
-              <ion-label>
-                <h3>
-                  <strong>R18 569.32</strong>
-                </h3>
+          <ion-item-sliding color="transparent">           
+            <ion-item color="transparent">
+              <ion-avatar slot="start" class="brandmark red-cattle">
+                <p class="brandmark-p">&#67; &#69; &#8710; <br />
+                  002
                 <p>
-                  <span>Insured: <ion-icon name="radio-button-on-outline"></ion-icon></span>
-                </p>
-              </ion-label>
-            </ion-note>
-          </ion-item>
-          <ion-item color="transparent">
-            <ion-avatar slot="start" class="brandmark black-cattle">
-              <p class="brandmark-p">&#67; &#69; &#8710; <br />
-                002
-              <p>
-            </ion-avatar>
-            <ion-label>
-              Female, Status: Alive
-            </ion-label>
-            <ion-note slot="end">
+              </ion-avatar>
               <ion-label>
-                <h3>
-                  <strong>R18 569.32</strong>
-                </h3>
-                <p>
-                  <span>Insured: <ion-icon name="radio-button-off-outline"></ion-icon></span>
-                </p>
+                Male, Status: Alive
               </ion-label>
-            </ion-note>
-          </ion-item>
-          <ion-item color="transparent">
-            <ion-avatar slot="start" class="brandmark red-cattle">
-              <p class="brandmark-p">&#67; &#69; &#8710; <br />
-                003
-              <p>
-            </ion-avatar>
-            <ion-label>
-              Male, Status: Alive
-            </ion-label>
-            <ion-note slot="end">
+              <ion-note slot="end">
+                <ion-label>
+                  <h3>
+                    <strong>R18 569.32</strong>
+                  </h3>
+                  <p>
+                    <span>Insured: <ion-icon name="radio-button-on-outline"></ion-icon></span>
+                  </p>
+                </ion-label>
+              </ion-note>
+            </ion-item>
+            <ion-item-options side="end">
+              <ion-item-option color="danger" (click)="onStatusConfirm('Lost', 1)">Lost</ion-item-option>
+            </ion-item-options>
+          </ion-item-sliding>
+          <ion-item-sliding color="transparent">           
+            <ion-item color="transparent">
+              <ion-avatar slot="start" class="brandmark red-cattle">
+                <p class="brandmark-p">&#67; &#69; &#8710; <br />
+                  0078
+                <p>
+              </ion-avatar>
               <ion-label>
-                <h3>
-                  <strong>R18 569.32</strong>
-                </h3>
-                <p>
-                  <span>Insured: <ion-icon name="radio-button-off-outline"></ion-icon></span>
-                </p>
+                Male, Status: Alive
               </ion-label>
-            </ion-note>
-          </ion-item>
+              <ion-note slot="end">
+                <ion-label>
+                  <h3>
+                    <strong>R18 569.32</strong>
+                  </h3>
+                  <p>
+                    <span>Insured: <ion-icon name="radio-button-on-outline"></ion-icon></span>
+                  </p>
+                </ion-label>
+              </ion-note>
+            </ion-item>
+            <ion-item-options side="end">
+              <ion-item-option color="danger" (click)="onStatusConfirm('Lost', 1)">Lost</ion-item-option>
+            </ion-item-options>
+          </ion-item-sliding>
+          <ion-item-sliding color="transparent">           
+            <ion-item color="transparent">
+              <ion-avatar slot="start" class="brandmark red-cattle">
+                <p class="brandmark-p">&#67; &#69; &#8710; <br />
+                  003
+                <p>
+              </ion-avatar>
+              <ion-label>
+                Male, Status: Alive
+              </ion-label>
+              <ion-note slot="end">
+                <ion-label>
+                  <h3>
+                    <strong>R18 569.32</strong>
+                  </h3>
+                  <p>
+                    <span>Insured: <ion-icon name="radio-button-on-outline"></ion-icon></span>
+                  </p>
+                </ion-label>
+              </ion-note>
+            </ion-item>
+            <ion-item-options side="end">
+              <ion-item-option color="danger" (click)="onStatusConfirm('Lost', 1)">Lost</ion-item-option>
+            </ion-item-options>
+          </ion-item-sliding>
           <ion-item color="transparent">
             <ion-avatar slot="start" class="brandmark black-cattle">
               <p class="brandmark-p">&#67; &#69; &#8710; <br />
@@ -247,25 +263,25 @@
 <footer>
   <div>
     <ion-row class="border-lightgrey">
-      <ion-col size="3" class="footer-item action">
+      <ion-col size="3" class="footer-item action" (click)="onRequestVisit()">
         <ion-label>
           <ion-icon name="walk" class="icon-visit icon"></ion-icon>
           <p class="footer-label">Request Visit</p>
         </ion-label>   
       </ion-col>
-      <ion-col size="3" class="footer-item action">
+      <ion-col size="3" class="footer-item action" (click)="onSell()">
         <ion-label>
           <ion-icon name="wallet" class="icon-wallet icon"></ion-icon>
           <p class="footer-label ">Sell</p>
         </ion-label>     
       </ion-col>
-      <ion-col size="3" class="footer-item action">
+      <ion-col size="3" class="footer-item action" (click)="onNeedLoan()">
         <ion-label>
           <ion-icon name="cash" class="icon-loan icon"></ion-icon>
           <p class="footer-label">Need a Loan?</p>
         </ion-label>  
       </ion-col>
-      <ion-col size="3" class="footer-item action">
+      <ion-col size="3" class="footer-item action" (click)="onInsurance()">
         <ion-label>
           <ion-icon name="umbrella" class="icon-insurance icon"></ion-icon>
           <p class="footer-label">Insurance?</p>

@@ -91,7 +91,7 @@
 }
 
 .white{
-    color: #fff;
+    color: #fff !important;
 }
 
 ion-item > div{
@@ -111,6 +111,16 @@ ion-input{
     font-size: 12px !important;
 }
 
+.white-cattle{
+    background-color: #fff;
+}
+.red-cattle{
+    background-color: #784a42;
+}
+.black-cattle{
+    background-color:  #2e2c2d;
+}
+
 .border-b{
     border-bottom: gray solid 1px;
   }
@@ -128,6 +138,23 @@ ion-input{
 }
 .profile-pic{
     border: #649173 2px solid;
+}
+
+.brandmark{
+    padding: 0.5px;
+    border: #649173 2px solid;
+  }
+
+  .brandmark-p{
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 5px;
+    color: #fff;
+}
+
+ion-list{
+    background: transparent !important;
 }
 
 .header{
@@ -159,6 +186,17 @@ ion-input{
   .padding-25{
     padding: 25px;
   }
+
+  .total{
+    color: #45644f;
+    font-weight: bold;
+    font-family: sans-serif;
+    float: right;
+  }
+
+  .padding-10l {
+    padding-left: 10px;;
+}
 
 .eWallet-title{
     color: #45644f;

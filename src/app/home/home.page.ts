@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { ModalController, NavController } from '@ionic/angular';
+import { AccountVerificationPage } from '../account-verification/account-verification.page';
 
 @Component({
   selector: 'app-home',
@@ -10,12 +11,38 @@ export class HomePage implements OnInit {
   public password: string = '';
   public username: string = '';
 
-  constructor(public navCtrl: NavController) { }
+  constructor(public navCtrl: NavController, private modalController: ModalController) { }
 
   ngOnInit() {
   }
 
+  async onInsurance() {
+    const modal = await this.modalController.create({
+      component: AccountVerificationPage,
+      cssClass: 'my-custom-class',
+      swipeToClose: true,      
+      breakpoints: [0, 0.2, 0.5, 1],
+      initialBreakpoint: 0.61,      
+    });
+    await modal.present();
+    const { data } = await modal.onWillDismiss();
+    if(data.isAuthenticated){      
+      this.navigate();
+    }
+  }
+
   onLogin(){
+    if(this.username){
+      if(this.username.toLocaleLowerCase().trim() == "farmer"
+      || this.username.toLocaleLowerCase().trim() == "capturer"
+      || this.username.toLocaleLowerCase().trim() == "admin"
+      || this.username.toLocaleLowerCase().trim() == "mmc"
+      || this.username.toLocaleLowerCase().trim() == "company")
+        this.onInsurance();      
+    }   
+  }
+
+  navigate(){    
     if(this.username){
       if(this.username.toLocaleLowerCase().trim() == "farmer")
         this.navCtrl.navigateRoot(['/farmer']); 
@@ -28,11 +55,10 @@ export class HomePage implements OnInit {
       if(this.username.toLocaleLowerCase().trim() == "company")
         this.navCtrl.navigateRoot(['/company']);
     }
-      
   }
 
   goToGuestDashboard(){
-    this.navCtrl.navigateRoot(['/guest-dashboard']);   
+    this.navCtrl.navigateRoot(['/guest']);   
   }
 
   goToForgotPassword(){

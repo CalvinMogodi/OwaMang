@@ -2,10 +2,6 @@
     border-bottom: 1px solid gray;
 }
 
-.padding{
-    padding: 20px;
-}
-
 .search{
     margin-top: 7px;
     padding: 20px;
@@ -36,9 +32,7 @@
 
   .header{
     height: 25%;
-    text-align: center;
-    background: linear-gradient(195deg, rgba(2,0,36,1) 0%, rgba(14,67,137,1) 50%, rgba(0,212,255,1) 100%);
-    padding: 25px;
+    padding: 15px;
 }
 
 .title-header{
@@ -47,14 +41,9 @@
     font-family: sans-serif;
 }
 
-.sub-title{
-    color: #97b1c9;
-    font-size: large;
-}
-
 .cancel-search{
     font-size: x-large;
-    color: silver;
+    color: darkslategray;
 }
 
 .marks{
@@ -65,11 +54,8 @@
 }
 
 .footer{
-    width: 100%;
-    padding: 15px;
-    height: 8%;
-    background-color: #27adf2;
-    color: #fff;
+    padding: 5px;
+    color: #45644f !important;
     font-size: 18px;
 }
 
@@ -83,8 +69,9 @@
     font-family: monospace;
 }
 .sign{
-    color: #bddefc;
+    color: #ffffff;
     font-size: x-large;
+    font-weight: 500;
     padding-right: 10px;
     position: relative;
     width: 25px !important;

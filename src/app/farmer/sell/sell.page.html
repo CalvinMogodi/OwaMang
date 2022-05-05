@@ -1,0 +1,83 @@
+<ion-content>
+  <div class="header">
+    <ion-item color="transparent" lines="none" class="center">
+      <ion-label>
+        <h2 class="title-header">Let's make Money!</h2>
+      </ion-label>
+      <ion-note slot="end">
+        <ion-icon (click)="onColse()" name="close" class="close-btn"></ion-icon>
+      </ion-note>
+    </ion-item>
+  </div>
+  <div class="body">
+    <div class="padding-10l">
+      <ion-row>
+        <ion-col size="12">
+          <ion-label>
+            <h4 class="eWallet-title">Available amount</h4>
+            <p class="font-small">R 155 264.24</p>
+          </ion-label>
+        </ion-col>      
+      </ion-row>     
+    </div>
+    
+    <ion-list color="transparent">
+      <ion-item color="transparent">
+        <ion-avatar slot="start" class="brandmark black-cattle">
+          <p class="brandmark-p">&#67; &#69; &#8710; <br />
+            002
+          <p>
+        </ion-avatar>
+        <ion-label>
+          Female, Status: Alive
+        </ion-label>
+        <ion-note slot="end">
+          <ion-label>
+            <h3>
+              <strong>R18 569.32</strong>
+            </h3>
+            <p>
+              <span *ngIf="sold" (click)="minusTotal();sold = !sold">un-Sell: <ion-icon name="radio-button-on-outline"></ion-icon></span>
+              <span *ngIf="!sold" (click)="addTotal();sold = !sold">Sell: <ion-icon name="radio-button-off-outline"></ion-icon></span>
+            </p>
+          </ion-label>
+        </ion-note>
+      </ion-item>
+      <ion-item color="transparent">
+        <ion-avatar slot="start" class="brandmark black-cattle">
+          <p class="brandmark-p">&#67; &#69; &#8710; <br />
+            006
+          <p>
+        </ion-avatar>
+        <ion-label>
+          Female, Status: Alive
+        </ion-label>
+        <ion-note slot="end">
+          <ion-label>
+            <h3>
+              <strong>R18 569.32</strong>
+            </h3>
+            <p>
+              <span *ngIf="sold1" (click)="minusTotal();sold1 = !sold1">un-Sell: <ion-icon name="radio-button-on-outline"></ion-icon></span>
+              <span *ngIf="!sold1" (click)="addTotal();sold1 = !sold1">Sell: <ion-icon name="radio-button-off-outline"></ion-icon></span>
+            </p>
+          </ion-label>
+        </ion-note>
+      </ion-item>
+    </ion-list>
+
+    <ion-item color="transparent">
+      <ion-label position="stacked">Notes</ion-label>
+      <ion-textarea rows="6" cols="20" placeholder="Enter any notes here..."></ion-textarea>
+    </ion-item>
+
+    <ion-label class="i-total">
+      <h4 class="eWallet-title">{{total | currency:'ZA':'R'}}</h4>
+      <p class="i-total">Total</p>
+    </ion-label>
+
+  </div>
+  
+  <br />
+  <ion-button (click)="onSave()" color="primary" expand="block">Sell</ion-button>
+</ion-content>

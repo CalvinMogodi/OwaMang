@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 
 @Component({
@@ -9,6 +9,7 @@ import { ModalController } from '@ionic/angular';
 export class FarmerSearchPage implements OnInit {
   public noData: boolean = false;
   public farmers: any[] = [];
+  @Input() isLivestock: boolean;
   constructor(private modalController: ModalController) { }
 
   ngOnInit() {
@@ -65,6 +66,7 @@ export class FarmerSearchPage implements OnInit {
   selectUser(farmer:any){
     this.modalController.dismiss({
       isCancel: false,
+      isLivestock: this.isLivestock,
       farmer: this.farmers[2]
     });
   }
@@ -72,6 +74,7 @@ export class FarmerSearchPage implements OnInit {
   onBack(){
     this.modalController.dismiss({
       isCancel: true,
+      isLivestock: this.isLivestock,
       farmer: undefined
     });
   }

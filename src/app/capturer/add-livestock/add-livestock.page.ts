@@ -200,22 +200,10 @@ export class AddLivestockPage implements OnInit {
   }
 
   async addEditAnimal(isAdd:boolean){
-    const modal = await this.modalController.create({
-      component: AnimalPage,
-      cssClass: 'my-custom-class',
-      swipeToClose: true,
-    });
-
-    await modal.present();  
-    
-    const { data } = await modal.onWillDismiss();
-    const farmer: any = data.farmer;
-    if(!farmer){
-     this.dismissModal();
-    }
-    else{
-      //this.fa
-    }
+    this.modalController.dismiss({
+      openAnimalPage: true,
+      brandmarks: null
+    });    
   }
 
   async onBack(){
@@ -230,6 +218,9 @@ export class AddLivestockPage implements OnInit {
     const { data } = await modal.onWillDismiss();
     const farmer: any = data.farmer;
     if(!farmer){
+      this.navCtrl.navigateRoot(['/capturer']); 
+     this.dismissModal();
+     this.dismissModal();
      this.dismissModal();
     }
     else{

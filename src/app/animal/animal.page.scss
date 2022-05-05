@@ -39,6 +39,40 @@
     transform: rotate(270deg);
 }
 
+.cattle-color-red{
+    background-color: #784a42;
+    opacity: 0.3;
+    border: #784a42 2px solid;
+}
+
+.cattle-color-white{
+    background-color: #e9dac8;
+    opacity: 0.3;
+    border: #e9dac8 2px solid;
+}
+
+.cattle-color-black{
+    background-color:  #2e2c2d;
+    opacity: 0.3;
+    border: #2e2c2d 2px solid;
+}
+
+.selected{
+    border: #649173 1px solid;
+    color: #fff;
+    background: linear-gradient(195deg, #649173, #dbd5a4);
+    padding: 5px;
+}
+
+.border{
+    padding: 5px;
+}
+
+.label{
+    margin-left: -250px;
+    padding: 10px 5px 0px 19px;
+}
+
 .header{
     height: 18%;
 }
@@ -65,6 +99,7 @@
     font-size: 14px;
     line-height: 1.5;
     color: #45644f !important;
+    margin: unset;
 }
 
 .account-type-icon{
@@ -80,4 +115,12 @@
 .card{
     background: ghostwhite;
     color: #45644f !important;
+}
+
+.padding-12{
+    padding: 10px 0px 5px 15px;
+}
+
+.padding-item{
+    padding: 10px 0px 0px 15px;
 }

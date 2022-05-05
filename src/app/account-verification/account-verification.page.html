@@ -1,0 +1,43 @@
+<ion-content padding [scrollEvents]="false" style="background-color: #fff;" fullscreen>
+  <div class="header">
+    <ion-item color="transparent" lines="none">
+      <ion-note slot="end">
+        <ion-icon (click)="onBack()" name="close-outline" class="back-btn"></ion-icon>
+      </ion-note>
+      <ion-label>
+        <h2 class="title-header">Account Verification</h2>
+      </ion-label>
+    </ion-item>
+  </div>
+  <div class="body">
+    <p>Please eneter the code we sent to ***@gm**.com. </p>
+    <ion-row >
+      <ion-col size="2">
+       <ion-input class="x" #otp1 required="true" maxlength="1" type="number">
+       </ion-input>
+      </ion-col>
+      <ion-col size="2">
+       <ion-input class="x" #otp2 required="true" maxlength="1" type="number">
+       </ion-input>
+      </ion-col>
+      <ion-col size="2">
+       <ion-input class="x" #otp3 required="true" maxlength="1" type="number">
+       </ion-input>
+      </ion-col>
+      <ion-col size="2">
+       <ion-input class="x" #otp4 required="true" maxlength="1" type="number">
+      </ion-input>
+    </ion-col>
+    <ion-col size="2">
+      <ion-input class="x" #otp5  required="true" maxlength="1" type="number">
+      </ion-input>
+    </ion-col>
+    <ion-col size="2">
+      <ion-input class="x" #otp6  required="true" maxlength="1" type="number">
+      </ion-input>
+    </ion-col>
+    </ion-row>
+    <p>Code can be resend in 1:52</p>
+    <ion-button class="font-normal" expand="block" (click)="onVerify()">Verify</ion-button>
+  </div>  
+</ion-content>

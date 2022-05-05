@@ -1,20 +1,23 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
-      <ion-content>
+      <ion-content class="app-menu">
         <ion-list id="inbox-list">
-          <div>
-            <ion-list-header style="color: #474846;">Farm name</ion-list-header>
-            <ion-note><b>&#67; &#69; &#8710;</b></ion-note><br>
-            <ion-note>hi@ionicframework.com</ion-note>
-          </div>
-
+          <ion-item color="transparent" lines="none">
+            <ion-avatar slot="start" class="profile-pic">
+              <img src="../assets/img/home.jpg"/>
+            </ion-avatar>           
+            <ion-label>
+              <h2 class="title-header">O wa many</h2>
+              <p>Manage, Secure, Insure your livestock!!</p>
+            </ion-label>           
+          </ion-item>
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false"
-              routerLinkActive="selected">
-              <ion-icon slot="start" [ios]="p.icon + '-outline'"></ion-icon>
-              <ion-label>{{ p.title }}</ion-label>
+            <ion-item color="transparent" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false"
+              routerLinkActive="selected">             
+              <ion-icon name="lock-closed-outline"></ion-icon>
+              <ion-label> <h3 class="menu-item-text">{{ p.title }}</h3> </ion-label>
             </ion-item>
           </ion-menu-toggle>
         </ion-list>

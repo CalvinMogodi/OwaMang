@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ModalController, NavController } from '@ionic/angular';
-import { BrandmarksPage } from '../brandmarks/brandmarks.page';
-import { LocationAutocompletePage } from '../location-autocomplete/location-autocomplete.page';
+import { BrandmarksPage } from '../../brandmarks/brandmarks.page';
+import { LocationAutocompletePage } from '../../location-autocomplete/location-autocomplete.page';
 
 @Component({
   selector: 'app-register',

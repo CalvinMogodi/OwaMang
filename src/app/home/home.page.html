@@ -2,7 +2,7 @@
 <ion-content [scrollEvents]="false">
     <img src="../../assets/img/home.jpg"/>
     <div class="login-background">
-      <ion-router-link href="guest-dashboard" (click)="goToGuestDashboard()" class="underline">Guest?</ion-router-link><br><br>
+      <ion-router-link href="guest" (click)="goToGuestDashboard()" class="underline">Guest?</ion-router-link><br><br>
      <hr class="line"/><br>
       <ion-label class="title">Login</ion-label> 
       <ion-item color="transparent" lines="none">
@@ -14,7 +14,7 @@
         <ion-input class="border-b" [ngModel]="password" required="true" type="password" size="password" autocomplete="new-password"></ion-input>
       </ion-item>
       <br>
-        <ion-button class="font-normal" expand="block" (click)="onLogin()">Login</ion-button>
+        <ion-button class="font-normal" expand="block" (click)="onLogin()">Continue</ion-button>
         <ion-grid>
           <ion-row>
             <ion-col>

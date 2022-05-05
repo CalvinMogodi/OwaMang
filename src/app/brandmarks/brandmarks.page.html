@@ -1,10 +1,14 @@
-<ion-content padding>
-
+<ion-content padding [scrollEvents]="false" style="background-color: #fff;" fullscreen>
   <div class="header">
-    <ion-label>
-      <h2 class="title-header">Brandmark Search </h2>
-      <p class="sub-title">Use the marks below to search for barndmark.</p>
-    </ion-label>
+    <ion-item color="transparent" lines="none">
+      <ion-note slot="start">
+        <ion-icon (click)="onBack()" name="arrow-back-outline" class="back-btn"></ion-icon>
+      </ion-note>
+      <ion-label>
+        <h2 class="title-header">Brandmark</h2>
+        <p>Use the marks below to search for barndmark.</p>
+      </ion-label>
+    </ion-item>
 
     <ion-grid>
       <ion-row class="padding line">
@@ -40,7 +44,7 @@
     <ion-grid>
       <ion-row>
         <ion-col (click)="onCancel()" size="6" class="text-center right-border" >
-          <span>Cancel</span>
+          <span style="color: darkslategray;">Cancel</span>
         </ion-col>
         <ion-col (click)="onConfirm()" size="6" class="text-center">
           <span>Confirm</span>

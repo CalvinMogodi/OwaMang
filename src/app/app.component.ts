@@ -7,8 +7,7 @@ import { timer } from 'rxjs';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Add Livestock', url: '/farmer-dashboard', icon: 'add' },
-    { title: 'Logout', url: '/home', icon: 'lock' },
+    { title: 'Logout', url: '/home', icon: 'lock-closed-outline' },
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   
