@@ -34,8 +34,8 @@ export class AnimalPage implements OnInit {
   initAnimal(){
     this.dateValue = this.datePipe.transform(new Date('2022-4-28'), 'dd MMMM yyyy');  
     this.animal = {
-      breadTypeObj: {code: 1, text: 'Afrikaner', value:1},
-      breadType: 'Afrikaner'
+      breedTypeObj: {code: 1, text: 'Afrikaner', value:1},
+      breedType: 'Afrikaner'
     }
     this.brandmarks.push({class: 'south', htmlCode: '&#66;', element: '<span class="south">&#81;</span>'});
     this.brandmarks.push({class: 'north', htmlCode: '&#8317;', element: '<span class="north">&#8317;</span>'});
@@ -82,6 +82,6 @@ export class AnimalPage implements OnInit {
 }
 
 export class Animal{
-  breadType: string;
-  breadTypeObj: any;
+  breedType: string;
+  breedTypeObj: any;
 }

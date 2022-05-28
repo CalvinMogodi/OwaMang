@@ -58,7 +58,7 @@ export class HomePage implements OnInit {
   }
 
   goToGuestDashboard(){
-    this.navCtrl.navigateRoot(['/guest']);   
+    this.navCtrl.navigateRoot(['/guest',{ userRole: 'Guest'}]);   
   }
 
   goToForgotPassword(){

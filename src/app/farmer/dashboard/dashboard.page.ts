@@ -84,7 +84,7 @@ export class DashboardPage implements OnInit {
       cssClass: 'my-custom-class',
       swipeToClose: true,      
       breakpoints: [0, 0.2, 0.5, 1],
-      initialBreakpoint: 0.47,      
+      initialBreakpoint: 0.5,      
     });
     await modal.present();
     const { data } = await modal.onWillDismiss();

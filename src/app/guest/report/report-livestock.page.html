@@ -1,0 +1,27 @@
+<ion-content>
+  <div class="header" style="padding-top: unset;">
+    <ion-item color="transparent" lines="none" class="center">
+      <ion-label>
+        <h2 class="title-header">Lost and found?</h2>
+      </ion-label>
+      <ion-note slot="end">
+        <ion-icon (click)="onColse()" name="close" class="close-btn"></ion-icon>
+      </ion-note>
+    </ion-item>
+  </div>
+
+  <div style="padding: 5px 16px 10px 10px !important;">
+    <ion-item color="transparent" button="true" id="open-date-input"  lines="none">
+      <ion-label position="floating">Contact Number</ion-label>
+      <ion-input type="tel"></ion-input>
+    </ion-item>
+    <div>
+      <ion-item color="transparent"  lines="none">
+        <ion-label position="stacked">Notes</ion-label>
+        <ion-textarea rows="6" cols="20" placeholder="Enter any notes here..."></ion-textarea>
+      </ion-item>
+    </div>
+    <br />
+    <ion-button (click)="onSave()" color="primary" expand="block">Submit</ion-button>
+  </div>
+</ion-content>

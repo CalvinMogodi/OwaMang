@@ -57,7 +57,6 @@ export class DashboardPage implements OnInit {
     const { data } = await modal.onWillDismiss();
     const farmer: any = data.farmer;
     if(farmer){
-        //var queryParams: JSON.stringify(farmer);
       this.navCtrl.navigateRoot(['/register',{ farmer: true}]);
     }
   }

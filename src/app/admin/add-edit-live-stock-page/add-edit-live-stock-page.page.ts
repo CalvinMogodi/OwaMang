@@ -17,7 +17,7 @@ export class AddEditLiveStockPagePage implements OnInit {
   public date: Date = new Date();
   public croppedImagePath = "";
   public isLoading = false;
-  public breadType: string;
+  public breedType: string;
   public color: string;
   public notes: string;
   public brandmarks: any[] = [];
@@ -51,7 +51,7 @@ export class AddEditLiveStockPagePage implements OnInit {
       {class: 'west', htmlCode: '&#x2141;', element: '<span class="west">&#x2141;</span>'},
       {class: 'west', htmlCode: '&#66;', element: '<span class="west">&#71;</span>'},
       {class: 'east', htmlCode: '&#66;', element: '<span class="east">&#88;</span>'}]
-      this.breadType = '8';
+      this.breedType = '8';
       this.color = '01'
       this.notes = 'notes notesnotes, notesnotes notesnotes notesnotes notesnotes notes. Notes notesnotes notes v notes notes notesnotesv notesnotes notes v notes notes notesnotesv.';
       this.uploads[0].imgUrl = '../../../assets/img/certificate.PNG'

@@ -15,8 +15,8 @@
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
             <ion-item color="transparent" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false"
-              routerLinkActive="selected">             
-              <ion-icon name="lock-closed-outline"></ion-icon>
+              routerLinkActive="selected" [queryParams]="{userRole: 'Farmer'}">             
+              <ion-icon name="{{ p.icon }}"></ion-icon>
               <ion-label> <h3 class="menu-item-text">{{ p.title }}</h3> </ion-label>
             </ion-item>
           </ion-menu-toggle>
