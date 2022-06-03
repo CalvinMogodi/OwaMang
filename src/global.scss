@@ -161,13 +161,12 @@ ion-list{
     height:10%;
     text-align: center;
     background: linear-gradient(195deg, #649173, #dbd5a4);
-    padding-top: 20px;
+    padding-top: 5px;
 }
 
 .title-header{
     color: #45644f !important;
     font-weight: 800 !important;
-    font-size: x-large !important;
     font-family: sans-serif !important;
 }
 
@@ -248,11 +247,15 @@ ion-list{
     z-index: -1;
 }
 
-.padding-20l{
-    padding-left: 20px;
+.input-wrapper {
+    overflow: unset !important;
 }
 
-.ion-searchbar input[type="text"]{
+.padding-10l{
+    padding-left: 10px;
+}
+
+.ion-searchbar {
     background-color: white !important;
 }
 

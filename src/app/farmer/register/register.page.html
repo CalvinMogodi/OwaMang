@@ -44,66 +44,70 @@
       </ion-col>
     </ion-row>
 
-    <div *ngIf="isCompany || isIndividual">
-      <ion-item *ngIf="isIndividual" color="transparent">
+    <div *ngIf="isCompany || isIndividual" style="padding: 15px;">
+
+      <ion-item *ngIf="isIndividual" color="transparent" lines="none">
         <ion-label position="floating">Name</ion-label>
         <ion-input required="true" class="border-b" [(ngModel)]="farmer.name"></ion-input>
       </ion-item>
-      <ion-item *ngIf="isIndividual" color="transparent">
+
+      <ion-item *ngIf="isIndividual" color="transparent" lines="none">
         <ion-label position="floating">Surname</ion-label>
         <ion-input required="true" class="border-b" [(ngModel)]="farmer.surname"></ion-input>
       </ion-item>
 
-      <ion-row class="full" *ngIf="isIndividual">
-        <ion-col size="9">
-          <ion-item color="transparent">
-            <ion-label position="floating">Farmer's ID</ion-label>
-            <ion-input required="true" (ionInput)="onIdInput($event)" [(ngModel)]="farmer.idNo" type="number"></ion-input>
-          </ion-item>
-        </ion-col>
-        <ion-col size="3" style="padding-top: 15px;">
-          <ion-label>
-            <h6 [ngStyle]="{'font-size': gender != '' ? '11px' : '12px' }">Gender</h6>
-            <p class="small-text">
-              <ion-icon *ngIf="gender == 'Male'" name="man" class="gerner-icon"></ion-icon>
-              <ion-icon *ngIf="gender == 'Female'" name="woman" class="gerner-icon"></ion-icon>
-            </p>
-          </ion-label>
-        </ion-col>
+      <ion-item color="transparent" style="width: 95% !important;">
+      <ion-row class="full" *ngIf="isIndividual">       
+          <ion-col size="9">
+            <ion-item color="transparent" lines="none" style="margin-left: -22px;">
+              <ion-label position="floating">Farmer's ID</ion-label>
+              <ion-input required="true" (ionInput)="onIdInput($event)" [(ngModel)]="farmer.idNo" type="number"></ion-input>
+            </ion-item>
+          </ion-col>
+          <ion-col size="3" style="padding-top: 15px;">
+            <ion-label>
+              <h6 [ngStyle]="{'font-size': gender != '' ? '11px' : '12px' }">Gender</h6>
+              <p class="small-text">
+                <ion-icon *ngIf="gender == 'Male'" name="man" class="gerner-icon"></ion-icon>
+                <ion-icon *ngIf="gender == 'Female'" name="woman" class="gerner-icon"></ion-icon>
+              </p>
+            </ion-label>
+          </ion-col>     
       </ion-row>
+    </ion-item>  
 
-      <ion-item *ngIf="isCompany" color="transparent">
+      <ion-item *ngIf="isCompany" color="transparent" lines="none">
         <ion-label position="floating">Company Name</ion-label>
         <ion-input required="true" class="border-b"></ion-input>
       </ion-item>
 
-      <ion-item *ngIf="isCompany" color="transparent">
+      <ion-item *ngIf="isCompany" color="transparent" lines="none">
         <ion-label position="floating">Company Reg no</ion-label>
         <ion-input required="true" class="border-b"></ion-input>
       </ion-item>
 
-      <ion-item color="transparent">
+      <ion-item color="transparent" lines="none">
         <ion-label position="floating" *ngIf="isIndividual">Residential Address</ion-label>
         <ion-label position="floating" *ngIf="isCompany">Business Address</ion-label>
         <ion-input required="true" (ionFocus)="setAddress()" [(ngModel)]="address" class="border-b"></ion-input>
       </ion-item>
 
-      <ion-item color="transparent">
+      <ion-item color="transparent" lines="none">
         <ion-label position="floating">Farm Address</ion-label>
         <ion-input required="true" (ionFocus)="setFarmAddress()" [(ngModel)]="farmAddress" class="border-b"></ion-input>
       </ion-item>
 
-      <ion-item color="transparent">
+      <ion-item color="transparent" lines="none">
         <ion-label position="floating">Contact no.1</ion-label>
         <ion-input required="true" type="tel" class="border-b" [(ngModel)]="farmer.contactNo1"></ion-input>
       </ion-item>
 
-      <ion-item color="transparent">
+      <ion-item color="transparent" lines="none">
         <ion-label position="floating">Contact no.2</ion-label>
         <ion-input required="true" type="tel" class="border-b" [(ngModel)]="farmer.contactNo2"></ion-input>
       </ion-item>
 
-      <ion-item color="transparent">
+      <ion-item color="transparent" lines="none">
         <ion-label position="floating">Email Address</ion-label>
         <ion-input required="true" type="email" class="border-b" [(ngModel)]="farmer.email"></ion-input>
       </ion-item>
