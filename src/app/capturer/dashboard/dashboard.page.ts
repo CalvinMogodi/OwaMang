@@ -4,7 +4,7 @@ import { BrandmarksPage } from 'src/app/brandmarks/brandmarks.page';
 import { ActivatedRoute } from '@angular/router';
 import { FarmerSearchPage } from 'src/app/farmer/search/search.page';
 import { AddLivestockPage } from '../add-livestock/add-livestock.page';
-import { AnimalPage } from 'src/app/animal/animal.page';
+import { SearchAnimalPage } from 'src/app/animal/search/search-animal.page';
 
 @Component({
   selector: 'app-dashboard',
@@ -76,18 +76,11 @@ export class DashboardPage implements OnInit {
     const { data } = await modal.onWillDismiss();
     const farmer: any = data.farmer;
     if(data.isLivestock){
-      const modal = await this.modalController.create({
-        component: AnimalPage,
-        cssClass: 'my-custom-class',
-        swipeToClose: true,
-        componentProps: { 
-          isAdd: isAdd,
-        }
-      });  
-      await modal.present();  
-      
-      const { data } = await modal.onWillDismiss();
-      const farmer: any = data.farmer;      
+      if(isAdd){
+        this.navCtrl.navigateRoot(['/animal',{ isEdit: false, farmer: farmer}]);
+      }else{
+        this.navCtrl.navigateRoot(['/search-animal',{ isEdit: true, farmer: farmer}]);
+      }       
     }else{
       this.navCtrl.navigateRoot(['/register',{ farmer: true}]);
       //this.openAddLivestockModal();

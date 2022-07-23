@@ -1,14 +1,16 @@
 import { DatePipe } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { ModalController, NavController } from '@ionic/angular';
-import { BrandmarksPage } from '../brandmarks/brandmarks.page';
+import { LostPage } from 'src/app/farmer/lost/lost.page';
+import { BrandmarksPage } from '../../brandmarks/brandmarks.page';
 
 @Component({
-  selector: 'app-animal',
-  templateUrl: './animal.page.html',
-  styleUrls: ['./animal.page.scss'],
+  selector: 'app-searchanimal',
+  templateUrl: './search-animal.page.html',
+  styleUrls: ['./search-animal.page.scss'],
 })
-export class AnimalPage implements OnInit {
+
+export class SearchAnimalPage implements OnInit {
   public brandmarks: any[] = [];
   public today: Date = new Date();
   public dateValue: any = this.today.toLocaleDateString();
@@ -68,8 +70,16 @@ export class AnimalPage implements OnInit {
     return this.datePipe.transform(data, 'dd MMMM yyyy');  
   }
 
-  onSaveAndNext(){
-
+  async onStatusConfirm() {
+    const modal = await this.modalController.create({
+      component: LostPage,
+      cssClass: 'my-custom-class',
+      swipeToClose: true,      
+      breakpoints: [0, 0.2, 0.5, 1],
+      initialBreakpoint: 0.4,      
+    });
+    await modal.present();
+    const { data } = await modal.onWillDismiss();
   }
 
   onSave(){
@@ -77,6 +87,14 @@ export class AnimalPage implements OnInit {
       isCancel: true,
       animal: undefined
     });
+  }
+
+  openAnimal(){
+    this.animal = {
+      breedTypeObj: {code: 1, text: 'Afrikaner', value: 1},
+      breedType: 'Afrikaner'
+    }
+    this.navCtrl.navigateRoot(['/animal', { isEdit: true, animal: this.animal }]); 
   }
 
 }

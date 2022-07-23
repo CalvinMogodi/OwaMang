@@ -1,5 +1,5 @@
 ion-menu ion-content {
-  --background: var(--ion-item-background, var(--ion-background-color, #fff));
+  --background: whitesmoke;
 }
 
 .menu-item-text {
@@ -48,7 +48,7 @@ ion-menu.md ion-item {
 }
 
 ion-menu.md ion-item.selected {
-  --background: rgba(var(--ion-color-primary-rgb), 0.14);
+  --background: rgba(var(whitesmoke), 0.14);
 }
 
 ion-menu.md ion-item.selected ion-icon {
@@ -122,4 +122,5 @@ ion-item.selected {
 
 #background-content{
   background: linear-gradient(195deg, #649173 -8%, #dbd5a4) !important;
+  background-color: whitesmoke !important;
 }

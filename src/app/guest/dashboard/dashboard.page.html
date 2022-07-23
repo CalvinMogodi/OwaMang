@@ -1,9 +1,6 @@
-<ion-content padding [scrollEvents]="false" style="background-color: #fff;" fullscreen>
+<ion-content padding [scrollEvents]="false" fullscreen style="overflow: hidden;">
   <div class="header">
-    <ion-item color="transparent" lines="none">
-      <ion-note slot="start">
-        <ion-icon (click)="onBack()" name="arrow-back-outline" class="back-btn font-xlager"></ion-icon>
-      </ion-note>
+    <ion-item color="transparent" lines="none" class="center">     
       <ion-label>
         <h2 class="title-header">Lost Livestock</h2>
       </ion-label>
@@ -14,8 +11,14 @@
     <div class="curve"></div>
   </section>
   <div class="body">
+    <div class="padding-10l">
+      <ion-label>
+        <h4 class="eWallet-title">Report lost livestock</h4>
+        <p class="font-small">United we stand divided we fall.</p>
+      </ion-label>
+    </div>
     <div style="padding: 5px;">
-      <ion-item (click)="showBrandmark()" style="border-radius: 20px;">
+      <ion-item (click)="showBrandmark()" style="border-radius: 20px;background-color: whitesmoke;">
         <ion-grid style="width: 100%;">
               <ion-row>
                 <ion-col size="1" *ngFor="let brandmark of brandmarks">
@@ -25,12 +28,12 @@
         </ion-grid>
       </ion-item>
     </div>
-    <div style="margin-top: 0%; background-color: white;z-index: 1;">
-      <ion-slides pager>
+    <div class="container">
+      <ion-slides pager class="vertical-center">
         <ion-slide *ngFor="let animal of lostAnimals">
           <div class="slide">
-            <ion-card>
-              <ion-item>
+            <ion-card style="background-color: white;">
+              <ion-item style="background-color: white;">
                 <ion-avatar class="profile-pic" item-start>
                   <img src="../../../assets/img/farmer-placeholder.png"/>
                 </ion-avatar>

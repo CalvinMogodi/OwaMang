@@ -118,7 +118,11 @@ const routes: Routes = [
   },
   {
     path: 'animal',
-    loadChildren: () => import('./animal/animal.module').then( m => m.AnimalPageModule)
+    loadChildren: () => import('./animal/add-edit/add-edit-animal.module').then( m => m.AddEditAnimalPageModule)
+  },
+  {
+    path: 'search-animal',
+    loadChildren: () => import('./animal/search/search-animal.module').then( m => m.SearchAnimalPageModule)
   },
   {
     path: 'insurance',

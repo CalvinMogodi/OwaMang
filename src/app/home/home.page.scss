@@ -1,5 +1,5 @@
 .login-background{
-  background-color: white;
+  background-color: whitesmoke !important;
   position: absolute;
   top: 40%;
   height: 50%;
@@ -49,5 +49,11 @@
     border-bottom: gray solid 1px;
     width: 88px;
   }
+  #background-content{
+    background-color: whitesmoke !important;
+  }
 
+  ion-content{
+    background-color: whitesmoke !important;
+}
   

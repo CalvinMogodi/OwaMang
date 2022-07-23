@@ -4,7 +4,7 @@ import { FileTransfer, FileUploadOptions, FileTransferObject } from '@awesome-co
 import { BrandmarksPage } from 'src/app/brandmarks/brandmarks.page';
 import { LocationAutocompletePage } from 'src/app/location-autocomplete/location-autocomplete.page';
 import { FarmerSearchPage } from 'src/app/farmer/search/search.page';
-import { AnimalPage } from 'src/app/animal/animal.page';
+import { AddEditAnimalPage } from 'src/app/animal/add-edit/add-edit-animal.page';
 
 
 @Component({

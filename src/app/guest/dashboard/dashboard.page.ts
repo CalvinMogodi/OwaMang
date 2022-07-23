@@ -17,7 +17,7 @@ export class DashboardPage implements OnInit {
 
   constructor(private modalController: ModalController, private route: ActivatedRoute, public navCtrl: NavController) { 
     this.route.params.subscribe(params => {
-      this.userRole = JSON.parse(params["userRole"]);            
+      this.userRole = params["userRole"];            
   });
   }
 

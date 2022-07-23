@@ -99,8 +99,9 @@ ion-item > div{
 }
 
 #background-content{
-    background-color: #ffffff !important;
+    background-color: whitesmoke !important;
 }
+
 ion-label {
     color: #45644f !important;
     font-size: 12px !important;
@@ -126,7 +127,7 @@ ion-input{
   }
 
 .scroll-y {
-    background-color: #fff !important;
+    background-color: whitesmoke !important;
 }
 
 .font-normal{
@@ -261,4 +262,8 @@ ion-list{
 
 .searchbar input[type="text"]{
     background-color: white
+}
+
+#background-content {
+    background-color: whitesmoke !important;
 }

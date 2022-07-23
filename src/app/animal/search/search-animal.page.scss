@@ -18,15 +18,10 @@
     text-align: end;
 }
 
-.ion-searchbar>input {
-    background-color: white !important;
-}
-
 .body{
-    height: 95% !important;
-    max-height: 95% !important;
+    height: 90% !important;
+    max-height: 90% !important;
     overflow: hidden;
-    margin-top: -10%;
 }
 
 .eWallet-title{
@@ -50,6 +45,10 @@
     color: white;
 }
 
+.title-header{
+    font-size: 18px !important;
+}
+
 section {
     position: relative;
     display: flex;
@@ -57,17 +56,18 @@ section {
     align-items: center;
 }
 
-.estHardvalue {
-    font-weight: 800;
+.text-wrapper {
+    overflow: unset !important;
+}
+
+.hardValue {
     font-size: 12;
     font-family: sans-serif;
-    opacity: 0%;
     bottom: 0;
     text-align: right;
     padding-top: 24px;
-    color: white;
     padding: 10px 10px 3px 0px;
-  }
+}
 
   .cattles{
     margin: 15px 15px 0px 15px;
@@ -99,6 +99,7 @@ section {
 .border-lightgrey{
     border-top: lightgrey 1px solid !important;
     background: linear-gradient(10deg, #649173 10%, #dbd5a4 100%);
+    height: 65px;
 }
 
 .footer-item{
@@ -130,28 +131,14 @@ section {
     border-top: #649173 3px solid;
 }
 
-.cow-img{
-    height:160px;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.curve::before {
-    z-index: -1;
-}
-
-.curve::after {
-    z-index: -2;
-}
-
 .footer-label{
     color: darkslategray;
     font-size: 12px;    
+    line-height: 10pt;
 }
 
 ion-label{
     color: #666666;
-    margin-left: 15px;
 }
 
 .wave{
@@ -165,9 +152,7 @@ ion-label{
   }
   /* */
   
-  .font-xlager{
-    font-size: x-large;
-  }
+  
   .wave::before{
     content: "";
     position: absolute;
@@ -198,31 +183,5 @@ ion-label{
     background: linear-gradient(195deg, #649173 -8%, #dbd5a4);
   }
 
-  .container{
-    background-color: whitesmoke;
-    height: 100%;
-    overflow: hidden;
-  }
-
-  .header {
-    z-index: -1;
-    position: relative;
-}
-
-.vertical-center{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 70%;
-}
-
-
-.curve::before {
-    width: 100% !important;
-}
-
-.font-small{
-    color: darkslategray !important;
-}
 
   

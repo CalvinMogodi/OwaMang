@@ -20,6 +20,7 @@ export class RegisterPage implements OnInit {
   public brandmarks: any[] = [];
   public address: string = '';
   public farmAddress: string = '';
+  public title: string = 'Create new account';
   public farmer: any = {
     name: undefined, 
     surname: undefined, 
@@ -40,7 +41,7 @@ export class RegisterPage implements OnInit {
       if(this.farmer){       
         this.intiUpdate();
       }        
-  });
+    });
   }
 
   ngOnInit() {
@@ -54,6 +55,7 @@ export class RegisterPage implements OnInit {
     this.farmAddress = this.farmer.farmAddress;
     this.isIndividual = true;
     this.gender = 'Male';
+    this.title = 'Update account';
   }
 
   onSave(){
