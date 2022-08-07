@@ -1,6 +1,6 @@
 <ion-content padding [scrollEvents]="false" fullscreen style="overflow: hidden;">
   <div class="header">
-    <ion-item color="transparent" lines="none" class="center">     
+    <ion-item color="transparent" lines="none" class="center">
       <ion-label>
         <h2 class="title-header">Lost Livestock</h2>
       </ion-label>
@@ -20,11 +20,11 @@
     <div style="padding: 5px;">
       <ion-item (click)="showBrandmark()" style="border-radius: 20px;background-color: whitesmoke;">
         <ion-grid style="width: 100%;">
-              <ion-row>
-                <ion-col size="1" *ngFor="let brandmark of brandmarks">
-                  <div style="padding: 5px 0px 0px 5px;" [ngClass]="brandmark.class" [innerHTML]="brandmark.element"></div>
-                </ion-col>
-              </ion-row>   
+          <ion-row>
+            <ion-col size="1" *ngFor="let brandmark of brandmarks">
+              <div style="padding: 5px 0px 0px 5px;" [ngClass]="brandmark.class" [innerHTML]="brandmark.element"></div>
+            </ion-col>
+          </ion-row>
         </ion-grid>
       </ion-item>
     </div>
@@ -35,28 +35,39 @@
             <ion-card style="background-color: white;">
               <ion-item style="background-color: white;">
                 <ion-avatar class="profile-pic" item-start>
-                  <img src="../../../assets/img/farmer-placeholder.png"/>
+                  <img src="../../../assets/img/farmer-placeholder.png" />
                 </ion-avatar>
                 <ion-label>
-                  <h2>Matome Moloi</h2>
-                  <p>072 123 4567</p>
+                  <h2>{{animal.farmer}}</h2>
+                  <p>{{animal.farmerPhone}}</p>
                 </ion-label>
               </ion-item>
-              <div class="cow-img" [ngStyle]="{'background-image': 'url(../../../assets/img/cow' + animal + '.png)'}">
+              <div class="cow-img" [ngStyle]="{'background-image': 'url(../../..' + animal.img+')'}">
 
               </div>
               <ion-label>
-                <h2>&#67; &#69; &#8710; 01</h2>
-                <p>Lost on 16-Feb-2022</p>
+                <h1 style="padding: 0px 0px 0px 30%;">
+                  <ion-grid style="width: 100%;">
+                    <ion-row>
+                      <ion-col size="1" *ngFor="let brandmark of animal.brandmark">
+                        <div style="padding: 5px 0px 0px 5px;" [ngClass]="brandmark.class"
+                          [innerHTML]="brandmark.element"></div>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </h1>
+                <p *ngIf="animal.status == 'Lost'">Lost on {{animal.lostRecord.lostDate | date:'fullDate'}}</p>
+                <p>{{animal.breed}} {{animal.gender}} {{animal.color}}</p>
               </ion-label>
               <ion-card-content>
 
-                <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of
-                  a DeLorean?! Whoa. This is heavy.</p>
+                <p *ngIf="animal.status == 'Lost'">{{animal.lostRecord.farmerComment}}</p>
+                <p *ngIf="animal.status != 'Lost'">{{animal.descrition}}</p>
               </ion-card-content>
 
-                <ion-button style="position: relative;bottom: 13px;" class="font-normal" expand="block" (click)="onReportLivestock()">Report</ion-button>
-            
+              <ion-button style="position: relative;bottom: 13px;" class="font-normal" expand="block"
+                (click)="onReportLivestock()">Report</ion-button>
+
             </ion-card>
           </div>
         </ion-slide>
